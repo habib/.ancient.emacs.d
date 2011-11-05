@@ -113,16 +113,16 @@
 ;(eide-start)
 
 ;; Ack
-;; (autoload 'ack-same "full-ack" nil t)
-;; (autoload 'ack "full-ack" nil t)
-;; (autoload 'ack-find-same-file "full-ack" nil t)
-;; (autoload 'ack-find-file "full-ack" nil t)
-;; ;; In Debian, ack is installed as ack-grep
-;; (if (equal system-type 'gnu/linux)
-;;   (defcustom ack-executable (executable-find "ack-grep")
-;;     "*The location of the ack executable."
-;;     :group 'full-ack
-;;     :type 'file))
+(autoload 'ack-same "full-ack" nil t)
+(autoload 'ack "full-ack" nil t)
+(autoload 'ack-find-same-file "full-ack" nil t)
+(autoload 'ack-find-file "full-ack" nil t)
+;; In Debian, ack is installed as ack-grep
+(if (equal system-type 'gnu/linux)
+  (defcustom ack-executable (executable-find "ack-grep")
+    "*The location of the ack executable."
+    :group 'full-ack
+    :type 'file))
 
 ;; Use cperl-mode instead of perl-mode
 ;; (mapc (lambda (pair)

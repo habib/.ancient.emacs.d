@@ -1,1 +1,10 @@
-This is my .emacs.d folder
+* Clone this repository
+cd ~
+git clone git://github.com/habib/.emacs.d.git
+cd .emacs.d
+
+* Get all the submodules
+git submodule init
+git submodule update
+
+* Launch Emacs!

@@ -4,3 +4,6 @@
 [submodule "packages/textmate"]
 	path = packages/textmate
 	url = https://github.com/emacsmirror/textmate.git
+[submodule "packages/full-ack"]
+	path = packages/full-ack
+	url = https://github.com/emacsmirror/full-ack.git
