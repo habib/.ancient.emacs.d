@@ -55,9 +55,9 @@
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
-
-;; Haml mode
-(require 'haml-mode)
+(add-hook 'yaml-mode-hook
+          '(lambda ()
+             (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 ;; Setup Ctags
 ;(setq path-to-ctags (executable-find "ctags"))
@@ -109,12 +109,6 @@
 ;; Android mode
 ;; (require 'android-mode)
 
-;; Emacs IDE
-;; Requires ctags and cscope to be installed
-;; This mode doesn't gel well with IDo mode
-;(require 'eide)
-;(eide-start)
-
 ;; Ack
 (autoload 'ack-same "full-ack" nil t)
 (autoload 'ack "full-ack" nil t)
@@ -160,10 +154,6 @@
  '(uniquify-buffer-name-style (quote forward) nil (uniquify))
  '(visible-bell t))
 
-;; Allow Emacs to switch to full-screen mode. Doesn't work on OSX yet.
-;(require 'fullscreen)
-;(fullscreen)
-
 ;; Move to the previous or next window
 ;; Copied from http://nex-3.com/posts/45-efficient-window-switching-in-emacs
 (defun select-next-window ()
@@ -188,13 +178,13 @@
 ;; (autoload 'sass-mode "sass-mode" nil t)
 
 ;; CSS mode
-;; (autoload 'css-mode "css-mode" nil t)
-;; (add-hook 'css-mode-hook '(lambda ()
-;; 			    (setq css-indent-level 2)
-;; 			    (setq css-indent-offset 2)))
+(autoload 'css-mode "css-mode" nil t)
+(add-hook 'css-mode-hook '(lambda ()
+			    (setq css-indent-level 2)
+			    (setq css-indent-offset 2)))
 
 ;; Load up Ruby and its related settings
-;(require 'ruby-settings)
+ (require 'ruby-settings)
 
 ;; Load up JavaScript settings
 ;;(require 'javascript-settings)
