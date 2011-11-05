@@ -183,6 +183,11 @@
 			    (setq css-indent-level 2)
 			    (setq css-indent-offset 2)))
 
+;; CoffeeScript mode
+(require 'coffee-mode)
+(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
+
 ;; Load up Ruby and its related settings
  (require 'ruby-settings)
 
