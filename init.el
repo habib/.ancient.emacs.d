@@ -52,9 +52,12 @@
 (add-hook 'ido-setup-hook 'ido-complete-hook)
 
 ;; YAML mode
-;(require 'yaml-mode)
-;(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-;(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
+
+;; Haml mode
+(require 'haml-mode)
 
 ;; Setup Ctags
 ;(setq path-to-ctags (executable-find "ctags"))

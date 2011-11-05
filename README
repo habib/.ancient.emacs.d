@@ -1,3 +1,8 @@
+* Prerequisites
+All OS: git
+Mac: ack
+Debian: ack-grep
+
 * Clone this repository
 cd ~
 git clone git://github.com/habib/.emacs.d.git

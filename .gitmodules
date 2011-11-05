@@ -7,3 +7,9 @@
 [submodule "packages/full-ack"]
 	path = packages/full-ack
 	url = https://github.com/emacsmirror/full-ack.git
+[submodule "packages/yaml-mode"]
+	path = packages/yaml-mode
+	url = https://github.com/emacsmirror/yaml-mode.git
+[submodule "packages/haml-mode"]
+	path = packages/haml-mode
+	url = https://github.com/emacsmirror/haml-mode.git
