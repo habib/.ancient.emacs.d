@@ -86,7 +86,7 @@
 
 ;; Auto-complete
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/packages/auto-complete/dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/packages/auto-complete/ac-dict")
 (ac-config-default)
 
 ;; For XML files, use nxml-mode instead of sgml-mode

@@ -15,6 +15,7 @@ Type: git submodule init
 Type: git submodule update
 
 * Setup AutoComplete mode
+Type: mkdir ~/.emacs.d/packages/auto-complete
 Type: cd ~/.emacs.d/installers/auto-complete
 Type: make install
 When prompted, type: ~/.emacs.d/packages/auto-complete
