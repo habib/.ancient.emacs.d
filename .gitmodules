@@ -19,3 +19,6 @@
 [submodule "packages/coffee-mode"]
 	path = packages/coffee-mode
 	url = https://github.com/emacsmirror/coffee-mode.git
+[submodule "installers/auto-complete"]
+	path = installers/auto-complete
+	url = https://github.com/emacsmirror/auto-complete

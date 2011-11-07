@@ -85,9 +85,9 @@
 ;; (yas/load-directory "~/.emacs.d/packages/yasnippets")
 
 ;; Auto-complete
-;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/packages/auto-complete/dict")
-;; (ac-config-default)
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/packages/auto-complete/dict")
+(ac-config-default)
 
 ;; For XML files, use nxml-mode instead of sgml-mode
 ;(add-to-list 'auto-mode-alist '("\\.xml\\'" . nxml-mode))

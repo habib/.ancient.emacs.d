@@ -1,17 +1,23 @@
 This is my .emacs.d folder
 
 * Prerequisites
-All OS: git
+All OS: git, make, exuberant-ctags
 Mac: ack
 Debian: ack-grep
 
 * Clone this repository
-cd ~
-git clone git://github.com/habib/.emacs.d.git
-cd .emacs.d
+Type: cd ~
+Type: git clone git://github.com/habib/.emacs.d.git
+Type: cd .emacs.d
 
 * Get all the submodules
-git submodule init
-git submodule update
+Type: git submodule init
+Type: git submodule update
+
+* Setup AutoComplete mode
+Type: cd ~/.emacs.d/installers/auto-complete
+Type: make install
+When prompted, type: ~/.emacs.d/packages/auto-complete
+You don't need to add anything else.
 
 * Launch Emacs!
