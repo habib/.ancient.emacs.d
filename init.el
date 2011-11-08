@@ -106,6 +106,9 @@
 (require 'textmate)
 (textmate-mode)
 
+(setq whitespace-style '(trailing space-before-tab
+                         indentation space-after-tab))
+
 ;; Android mode
 ;; (require 'android-mode)
 

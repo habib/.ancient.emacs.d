@@ -44,12 +44,8 @@
 	    (setq ruby-deep-indent-paren nil)
 	    (setq c-tab-always-indent nil)
 	    (setq ruby-deep-arglist t)
-	    ;(require 'ruby-style)
-	    ;; Ruby block mode
-;;	    (require 'ruby-block)
-;;	    (ruby-block-mode t)
-	    ;; display to minibuffer and do overlay
-;;	    (setq ruby-block-highlight-toggle t)
+	    (require 'ruby-block)
+	    (ruby-block-mode t)
 ;;	    (require 'inf-ruby)
 ;;	    (require 'ruby-compilation)
 	    (define-key ruby-mode-map "\C-m" 'newline-and-indent)

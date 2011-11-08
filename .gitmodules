@@ -22,3 +22,6 @@
 [submodule "installers/auto-complete"]
 	path = installers/auto-complete
 	url = https://github.com/emacsmirror/auto-complete
+[submodule "packages/ruby-block"]
+	path = packages/ruby-block
+	url = https://github.com/emacsmirror/ruby-block.git
