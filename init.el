@@ -59,6 +59,9 @@
           '(lambda ()
              (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
+(require 'autopair)
+(autopair-global-mode)
+
 ;; Setup Ctags
 ;(setq path-to-ctags (executable-find "ctags"))
 ;(setq tags-revert-without-query 1)
