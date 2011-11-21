@@ -46,7 +46,7 @@
 	    (setq ruby-deep-arglist t)
 	    (require 'ruby-block)
 	    (ruby-block-mode t)
-;;	    (require 'inf-ruby)
+	    (require 'inf-ruby)
 ;;	    (require 'ruby-compilation)
 	    (define-key ruby-mode-map "\C-m" 'newline-and-indent)
 ;;	    (unless (file-exists-p (concat (textmate-project-root) "/TAGS"))
