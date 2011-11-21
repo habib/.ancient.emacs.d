@@ -13,9 +13,6 @@
 [submodule "packages/haml-mode"]
 	path = packages/haml-mode
 	url = https://github.com/emacsmirror/haml-mode.git
-[submodule "packages/rvm"]
-	path = packages/rvm
-	url = https://github.com/emacsmirror/rvm.git
 [submodule "packages/coffee-mode"]
 	path = packages/coffee-mode
 	url = https://github.com/emacsmirror/coffee-mode.git
