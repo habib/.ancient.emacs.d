@@ -1,5 +1,3 @@
-;; On Linux set the Super Key to Meta
-
 ;; When started as a GUI app on Mac OS X, Emacs doesn't pick up environment variables
 (add-to-list 'exec-path (getenv "PATH"))
 
@@ -9,7 +7,9 @@
 ;; All the packages should be placed under the packages folder. Add them all.
 (mapc (lambda (dir)
 	(add-to-list 'load-path dir))
-      (directory-files "~/.emacs.d/packages/" 'full))
+      (directory-files (concat user-emacs-directory
+                               (file-name-as-directory "packages"))
+                       'full))
 
 ;; Reliable way to maximize the window on startup on Ubuntu. Not so successful on a Mac
 (require 'maxframe)
@@ -19,14 +19,17 @@
 (setq tab-width 4)
 
 ;; Trailing whitespace should be banned
-(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
+(add-hook 'before-save-hook
+          (lambda ()
+            (delete-trailing-whitespace)))
 
 ;; Use spaces for indentation
 (setq indent-tabs-mode nil)
 (setq-default indent-tabs-mode nil)
 
 ;; Remove the toolbar
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'tool-bar-mode)
+    (tool-bar-mode -1))
 
 ;; I don't like to type yes. y should suffice
 (fset 'yes-or-no-p 'y-or-n-p)
