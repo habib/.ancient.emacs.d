@@ -24,7 +24,10 @@
 	url = https://github.com/emacsmirror/ruby-block.git
 [submodule "packages/autopair"]
 	path = packages/autopair
-	url = https://github.com/emacsmirror/autopair
+	url = https://github.com/emacsmirror/autopair.git
 [submodule "packages/rvm"]
 	path = packages/rvm
-	url = https://github.com/habib/rvm.el
+	url = https://github.com/habib/rvm.el.git
+[submodule "packages/ruby-compilation"]
+	path = packages/ruby-compilation
+	url = https://github.com/emacsmirror/ruby-compilation.git
