@@ -5,6 +5,9 @@
 (require 'rvm)
 (rvm-use-default)
 
+;; Emacs Rails
+(require 'rails)
+
 (eval-after-load 'ruby-mode
   '(progn
      ;; work around possible elpa bug
