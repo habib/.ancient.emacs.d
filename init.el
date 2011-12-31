@@ -62,12 +62,12 @@
           '(lambda ()
              (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
-(require 'autopair)
-(autopair-global-mode)
-
 ;; Setup Ctags
 ;(setq path-to-ctags (executable-find "ctags"))
 ;(setq tags-revert-without-query 1)
+
+;(require 'autopair)
+;(autopair-global-mode)
 
 ;; Ruby has ruby-electric mode that does the same thing
 ;; (add-hook 'ruby-mode-hook (lambda () (setq autopair-dont-activate t)))
@@ -95,9 +95,6 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/packages/auto-complete/ac-dict")
 (ac-config-default)
 
-;; For XML files, use nxml-mode instead of sgml-mode
-;(add-to-list 'auto-mode-alist '("\\.xml\\'" . nxml-mode))
-
 ;; Temporary files aren't put in the same directory
 (setq make-backup-files nil)
 (setq backup-directory-alist
@@ -112,8 +109,7 @@
 (require 'textmate)
 (textmate-mode)
 
-(setq whitespace-style '(trailing space-before-tab
-                         indentation space-after-tab))
+(setq whitespace-style '(trailing space-before-tab indentation space-after-tab))
 
 ;; Android mode
 ;; (require 'android-mode)
@@ -131,10 +127,10 @@
     :type 'file))
 
 ;; Use cperl-mode instead of perl-mode
-;; (mapc (lambda (pair)
-;; 		(if (eq (cdr pair) 'perl-mode)
-;; 			(setcdr pair 'cperl-mode)))
-;; 	  (append auto-mode-alist interpreter-mode-alist))
+(mapc (lambda (pair)
+        (if (eq (cdr pair) 'perl-mode)
+            (setcdr pair 'cperl-mode)))
+      (append auto-mode-alist interpreter-mode-alist))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -178,19 +174,25 @@
 (global-set-key (kbd "M-<right>") 'select-next-window)
 (global-set-key (kbd "M-<left>")  'select-previous-window)
 
+;;Writegood mode
+(require 'writegood-mode)
+(global-set-key "\C-cg" 'writegood-mode)
+
 ;; rainbow mode - Highlights colors within a file, such as "#FF00FF"
 ;; or "rgba(1,2,3,0.5)"
-;;(require 'rainbow-mode)
-
-;; Sass-mode
-;; (require 'sass-mode)
-;; (autoload 'sass-mode "sass-mode" nil t)
+(require 'rainbow-mode)
 
 ;; CSS mode
 (autoload 'css-mode "css-mode" nil t)
 (add-hook 'css-mode-hook '(lambda ()
 			    (setq css-indent-level 2)
-			    (setq css-indent-offset 2)))
+			    (setq css-indent-offset 2)
+                            (rainbow-mode)))
+
+
+;; Sass-mode
+;; (require 'sass-mode)
+;; (autoload 'sass-mode "sass-mode" nil t)
 
 ;; CoffeeScript mode
 (require 'coffee-mode)
