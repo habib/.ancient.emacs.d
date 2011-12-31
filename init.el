@@ -65,6 +65,11 @@
           '(lambda ()
              (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
+(require 'yaml-path)
+(add-hook 'yaml-mode-hook
+          '(lambda ()
+             (define-key yaml-mode-map (kbd "C-c C-p") 'yaml-path/path)))
+
 ;; Setup Ctags
 ;(setq path-to-ctags (executable-find "ctags"))
 ;(setq tags-revert-without-query 1)
@@ -181,11 +186,11 @@
 (global-set-key (kbd "M-<right>") 'select-next-window)
 (global-set-key (kbd "M-<left>")  'select-previous-window)
 
-;;Writegood mode
+;; Writegood mode
 (require 'writegood-mode)
 (global-set-key "\C-cg" 'writegood-mode)
 
-;; rainbow mode - Highlights colors within a file, such as "#FF00FF"
+;; Rainbow mode - Highlights colors within a file, such as "#FF00FF"
 ;; or "rgba(1,2,3,0.5)"
 (require 'rainbow-mode)
 
