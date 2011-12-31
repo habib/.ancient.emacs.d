@@ -49,3 +49,6 @@
 [submodule "packages/ruby-electric"]
 	path = packages/ruby-electric
 	url = https://github.com/emacsmirror/ruby-electric.git
+[submodule "packages/rhtml"]
+	path = packages/rhtml
+	url = https://github.com/emacsmirror/rhtml.git

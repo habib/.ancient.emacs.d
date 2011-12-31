@@ -8,7 +8,7 @@
 ;; Emacs Rails
 (require 'rails)
 
-;; For electric goodness
+;; For electric goodness!
 (require 'ruby-electric)
 (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 
@@ -110,19 +110,20 @@ exec-to-string command, but it works and seems fast"
                                   'flymake-display-err-menu-for-current-line)
                    (flymake-mode t))))))
 
+
+;; rhtml mode
+(require 'rhtml-mode)
+; put rhtml templates into rhtml-mode
+(setq auto-mode-alist  (cons '("\\.erb$" . rhtml-mode) auto-mode-alist))
+; put any rjs scripts into ruby-mode, as they are basically ruby
+(setq auto-mode-alist  (cons '("\\.rjs$" . ruby-mode) auto-mode-alist))
+
 ;; ;; Rinari mode
 ;; (require 'rinari)
 ;; (setq rinari-tags-file-name "TAGS")
 ;; (setq rinari-major-modes
 ;;       (list 'mumamo-after-change-major-mode-hook 'dired-mode-hook 'ruby-mode-hook
 ;;             'css-mode-hook 'yaml-mode-hook 'javascript-mode-hook))
-
-;; ;; rhtml mode
-;; (require 'rhtml-mode)
-;; ; put rhtml templates into rhtml-mode
-;; (setq auto-mode-alist  (cons '("\\.erb$" . rhtml-mode) auto-mode-alist))
-;; ; put any rjs scripts into ruby-mode, as they are basically ruby
-;; (setq auto-mode-alist  (cons '("\\.rjs$" . ruby-mode) auto-mode-alist))
 
 ;; ;; FIX ME
 ;; ;; Rspec mode
