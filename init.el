@@ -136,16 +136,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes 'tango-dark)
- '(transient-mark-mode t)
- '(truncate-lines t)
  '(auto-compression-mode t)
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
+ '(custom-enabled-themes (quote (tango-dark)))
  '(debug-on-error t)
  '(font-lock-maximum-decoration t)
  '(global-font-lock-mode t)
- '(global-hl-line-mode 1)
  '(global-linum-mode 1)
  '(inhibit-startup-screen t)
  '(mouse-yank-at-point t)
@@ -156,6 +153,8 @@
  '(size-indication-mode t)
  '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify)))
  '(tool-bar-mode nil)
+ '(transient-mark-mode t)
+ '(truncate-lines t)
  '(visible-bell t))
 
 ;; Uniquify buffers this way
@@ -213,4 +212,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "white" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "unknown" :family "Ubuntu Mono")))))
+ '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "unknown" :family "Ubuntu Mono")))))
