@@ -8,6 +8,10 @@
 ;; Emacs Rails
 (require 'rails)
 
+;; For electric goodness
+(require 'ruby-electric)
+(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
+
 (eval-after-load 'ruby-mode
   '(progn
      ;; work around possible elpa bug
@@ -45,6 +49,13 @@
     (insert "{}")
     (backward-char 1)))
 
+(defun ruby-insert-end ()
+  "Insert \"end\" at point and reindent current line."
+  (interactive)
+  (insert "end")
+  (ruby-indent-line t)
+  (end-of-line))
+
 (defun pcomplete/rake ()
   "Completion rules for the `ssh' command."
   (pcomplete-here (pcmpl-rake-tasks)))
@@ -74,7 +85,6 @@ exec-to-string command, but it works and seems fast"
 (eval-after-load 'ruby-mode
   '(progn
      (require 'flymake)
-
      ;; Invoke ruby with '-c' to get syntax checking
      (defun flymake-ruby-init ()
        (let* ((temp-file (flymake-init-create-temp-buffer-copy

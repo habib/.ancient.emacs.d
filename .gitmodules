@@ -46,3 +46,6 @@
 [submodule "packages/full-ack"]
 	path = packages/full-ack
 	url = https://github.com/emacsmirror/full-ack.git
+[submodule "packages/ruby-electric"]
+	path = packages/ruby-electric
+	url = https://github.com/emacsmirror/ruby-electric.git
