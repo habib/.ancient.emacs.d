@@ -19,9 +19,9 @@
 (setq tab-width 4)
 
 ;; Trailing whitespace should be banned
-(add-hook 'before-save-hook
-          (lambda ()
-            (delete-trailing-whitespace)))
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(setq whitespace-style '(trailing space-before-tab indentation space-after-tab))
 
 ;; Use spaces for indentation
 (setq indent-tabs-mode nil)
@@ -112,8 +112,6 @@
 (require 'textmate)
 (textmate-mode)
 
-(setq whitespace-style '(trailing space-before-tab indentation space-after-tab))
-
 ;; Android mode
 ;; (require 'android-mode)
 
@@ -159,8 +157,13 @@
  '(size-indication-mode t)
  '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify)))
  '(tool-bar-mode nil)
- '(uniquify-buffer-name-style (quote forward) nil (uniquify))
  '(visible-bell t))
+
+;; Uniquify buffers this way
+(require 'uniquify)
+(setq
+    uniquify-buffer-name-style 'reverse
+    uniquify-separator ":")
 
 ;; Move to the previous or next window
 ;; Copied from http://nex-3.com/posts/45-efficient-window-switching-in-emacs
