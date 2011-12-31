@@ -11,6 +11,9 @@
                                (file-name-as-directory "packages"))
                        'full))
 
+(add-to-list 'custom-theme-load-path (concat user-emacs-directory
+                                             (file-name-as-directory "themes")))
+
 ;; Reliable way to maximize the window on startup on Ubuntu. Sorta successful on a Mac with Emacs 24.
 (require 'maxframe)
 (add-hook 'window-setup-hook 'maximize-frame t)
@@ -140,6 +143,7 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (tango-dark)))
+ '(custom-safe-themes (quote ("04fd52af504d80a42d9487e3e6aa96b6937255d1" default)))
  '(debug-on-error t)
  '(font-lock-maximum-decoration t)
  '(global-font-lock-mode t)
