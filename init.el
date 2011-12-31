@@ -84,11 +84,9 @@
 ;; 	  (add-hook hook (lambda () (paredit-mode +1)))))
 ;;       modes-for-paredit)
 
-;; Yasnippet mode
-;; (require 'yasnippet)
-;; (yas/initialize)
-;; (yas/load-directory "~/.emacs.d/packages/yasnippet/snippets")
-;; (yas/load-directory "~/.emacs.d/packages/yasnippets")
+;; Yasnippet mode - EVERYWHERE!
+(require 'yasnippet)
+(yas/global-mode 1)
 
 ;; Auto-complete
 (require 'auto-complete-config)
