@@ -11,7 +11,7 @@
                                (file-name-as-directory "packages"))
                        'full))
 
-;; Reliable way to maximize the window on startup on Ubuntu. Not so successful on a Mac
+;; Reliable way to maximize the window on startup on Ubuntu. Sorta successful on a Mac with Emacs 24.
 (require 'maxframe)
 (add-hook 'window-setup-hook 'maximize-frame t)
 
@@ -95,15 +95,18 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/packages/auto-complete/ac-dict")
 (ac-config-default)
 
-;; Temporary files aren't put in the same directory
+;; I don't want those temporary files
 (setq make-backup-files nil)
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
-
-(auto-save-mode t)
+(setq auto-save-default nil)
 (global-auto-revert-mode t)
+
+;; Don't confirm file creation
+(setq confirm-nonexistent-file-or-buffer nil)
+
+;; Fix copy-paste between emacs and other x programs
+(setq x-select-enable-clipboard t)
+(if (functionp 'x-cut-buffer-or-selection-value)
+    (setq interprogram-paste-function 'x-cut-buffer-or-selection-value))
 
 ;; Textmate mode
 (require 'textmate)
@@ -189,10 +192,9 @@
 			    (setq css-indent-offset 2)
                             (rainbow-mode)))
 
-
 ;; Sass-mode
-;; (require 'sass-mode)
-;; (autoload 'sass-mode "sass-mode" nil t)
+(require 'sass-mode)
+(autoload 'sass-mode "sass-mode" nil t)
 
 ;; CoffeeScript mode
 (require 'coffee-mode)
