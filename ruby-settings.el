@@ -110,13 +110,17 @@ exec-to-string command, but it works and seems fast"
                                   'flymake-display-err-menu-for-current-line)
                    (flymake-mode t))))))
 
-
 ;; rhtml mode
 (require 'rhtml-mode)
 ; put rhtml templates into rhtml-mode
 (setq auto-mode-alist  (cons '("\\.erb$" . rhtml-mode) auto-mode-alist))
 ; put any rjs scripts into ruby-mode, as they are basically ruby
 (setq auto-mode-alist  (cons '("\\.rjs$" . ruby-mode) auto-mode-alist))
+
+;; FIX ME
+;; Rspec mode
+(require 'rspec-mode)
+(setq rspec-use-rvm t)
 
 ;; ;; Rinari mode
 ;; (require 'rinari)
@@ -125,10 +129,6 @@ exec-to-string command, but it works and seems fast"
 ;;       (list 'mumamo-after-change-major-mode-hook 'dired-mode-hook 'ruby-mode-hook
 ;;             'css-mode-hook 'yaml-mode-hook 'javascript-mode-hook))
 
-;; ;; FIX ME
-;; ;; Rspec mode
-;; (require 'rspec-mode)
-;; (setq rspec-use-rvm t)
 
 ;; ;; FIX ME
 ;; ;; Shoulda mode
