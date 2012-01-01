@@ -58,3 +58,6 @@
 [submodule "packages/rspec-mode"]
 	path = packages/rspec-mode
 	url = https://github.com/emacsmirror/rspec-mode.git
+[submodule "packages/shoulda-mode"]
+	path = packages/shoulda-mode
+	url = https://github.com/pezra/shoulda-mode.git

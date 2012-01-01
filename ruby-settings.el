@@ -122,6 +122,10 @@ exec-to-string command, but it works and seems fast"
 (require 'rspec-mode)
 (setq rspec-use-rvm t)
 
+;; Shoulda mode
+(require 'shoulda-mode)
+(setq shoulda-use-rvm t)
+
 ;; ;; Rinari mode
 ;; (require 'rinari)
 ;; (setq rinari-tags-file-name "TAGS")
@@ -130,9 +134,6 @@ exec-to-string command, but it works and seems fast"
 ;;             'css-mode-hook 'yaml-mode-hook 'javascript-mode-hook))
 
 
-;; ;; FIX ME
-;; ;; Shoulda mode
-;; (require 'shoulda-mode)
 
 ;; ;; Cucumber feature
 ;; ;; language if .feature doesn't have "# language: fi"
