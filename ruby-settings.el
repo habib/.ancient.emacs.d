@@ -126,21 +126,20 @@ exec-to-string command, but it works and seems fast"
 (require 'shoulda-mode)
 (setq shoulda-use-rvm t)
 
+;; Cucumber feature
+;; Set the default language to English if .feature doesn't have "# language: en"
+(setq feature-default-language "en")
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+(require 'feature-mode)
+(yas/load-directory (concat user-emacs-directory
+                            "packages/feature-mode/snippets"))
+
 ;; ;; Rinari mode
 ;; (require 'rinari)
 ;; (setq rinari-tags-file-name "TAGS")
 ;; (setq rinari-major-modes
 ;;       (list 'mumamo-after-change-major-mode-hook 'dired-mode-hook 'ruby-mode-hook
 ;;             'css-mode-hook 'yaml-mode-hook 'javascript-mode-hook))
-
-
-
-;; ;; Cucumber feature
-;; ;; language if .feature doesn't have "# language: fi"
-;; (setq feature-default-language "en")
-;; (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
-;; (require 'feature-mode)
-;; (yas/load-directory "~/.emacs.d/packages/feature-mode/snippets")
 
 ;; ;; RSense
 ;; (setq rsense-home (expand-file-name "~/opt/rsense-0.3"))

@@ -61,3 +61,6 @@
 [submodule "packages/shoulda-mode"]
 	path = packages/shoulda-mode
 	url = https://github.com/pezra/shoulda-mode.git
+[submodule "packages/feature-mode"]
+	path = packages/feature-mode
+	url = https://github.com/michaelklishin/cucumber.el.git
