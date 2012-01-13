@@ -14,6 +14,10 @@
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory
                                              (file-name-as-directory "themes")))
 
+;(byte-compile-file (concat user-emacs-directory "init.el"))
+;(byte-compile-file (concat user-emacs-directory "ruby-settings.el"))
+(byte-recompile-directory user-emacs-directory 0)
+
 ;; Reliable way to maximize the window on startup on Ubuntu. Sorta successful on a Mac with Emacs 24.
 (require 'maxframe)
 (add-hook 'window-setup-hook 'maximize-frame t)
@@ -148,10 +152,11 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (zenburn)))
- '(custom-safe-themes (quote ("fbede4acdbd161d1b1041368ebd715c46909c1c6" "140b062a645b3e6f9a2d414b15776e1bf05ceec0" "1b3a7220b172359d87dbd24870aa8ded43d7cb3b" "e40e8428270cf1e4552f108da5f57d8e7080354d" "04fd52af504d80a42d9487e3e6aa96b6937255d1" default)))
+ '(custom-safe-themes (quote ("b9df72e7a22e3fdf85eb6c5d80dfee43a28d3e643ed07a987f08105bbcdd6174" default)))
  '(debug-on-error t)
  '(font-lock-maximum-decoration t)
  '(global-font-lock-mode t)
+ '(global-hl-line-mode t)
  '(global-linum-mode 1)
  '(hl-line-mode t)
  '(inhibit-startup-screen t)
@@ -161,7 +166,6 @@
  '(scroll-bar-mode (quote right))
  '(show-paren-mode t)
  '(size-indication-mode t)
- '(global-hl-line-mode t)
  '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify)))
  '(tool-bar-mode nil)
  '(truncate-lines t)
