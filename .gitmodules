@@ -64,3 +64,6 @@
 [submodule "packages/feature-mode"]
 	path = packages/feature-mode
 	url = https://github.com/michaelklishin/cucumber.el.git
+[submodule "packages/android-mode"]
+	path = packages/android-mode
+	url = https://github.com/emacsmirror/android-mode.git

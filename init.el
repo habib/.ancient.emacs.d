@@ -123,7 +123,7 @@
 (textmate-mode)
 
 ;; Android mode
-;; (require 'android-mode)
+(require 'android-mode)
 
 ;; Ack
 (autoload 'ack-same "full-ack" nil t)
