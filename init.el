@@ -16,7 +16,7 @@
 
 ;(byte-compile-file (concat user-emacs-directory "init.el"))
 ;(byte-compile-file (concat user-emacs-directory "ruby-settings.el"))
-(byte-recompile-directory user-emacs-directory 0)
+;(byte-recompile-directory user-emacs-directory 0)
 
 ;; Reliable way to maximize the window on startup on Ubuntu. Sorta successful on a Mac with Emacs 24.
 (require 'maxframe)
@@ -48,6 +48,9 @@
 
 ;; Load up Tramp
 (require 'tramp)
+
+;; Clojure mode
+(require 'clojure-mode)
 
 ;; Startup IDo
 (require 'ido)
@@ -85,16 +88,19 @@
 ;; (add-hook 'ruby-mode-hook (lambda () (setq autopair-dont-activate t)))
 
 ;; Modes in which Paredit should be active and Autopair shouldn't
-;; (setf modes-for-paredit '(emacs-lisp lisp inferior-lisp slime slime-repl repl))
+(setf modes-for-paredit '(emacs-lisp lisp inferior-lisp slime slime-repl repl))
 
 ;; Paredit
-;; (autoload 'paredit-mode "paredit" "Minor mode for pseudo-structurally editing Lisp code." t)
-;; (mapc (lambda (mode)
-;; 	(let ((hook (intern (concat (symbol-name mode)
-;; 				    "-mode-hook"))))
-;; 	  (add-hook hook (lambda () (setq autopair-dont-activate t)))
-;; 	  (add-hook hook (lambda () (paredit-mode +1)))))
-;;       modes-for-paredit)
+(autoload 'paredit-mode "paredit" "Minor mode for pseudo-structurally editing Lisp code." t)
+(mapc (lambda (mode)
+	(let ((hook (intern (concat (symbol-name mode)
+				    "-mode-hook"))))
+	  (add-hook hook (lambda () (setq autopair-dont-activate t)))
+	  (add-hook hook (lambda () (paredit-mode +1)))))
+      modes-for-paredit)
+
+(defun turn-on-paredit () (paredit-mode 1))
+(add-hook 'clojure-mode-hook 'turn-on-paredit)
 
 ;; Yasnippet mode - EVERYWHERE!
 (require 'yasnippet)
@@ -152,13 +158,13 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (zenburn)))
- '(custom-safe-themes (quote ("b9df72e7a22e3fdf85eb6c5d80dfee43a28d3e643ed07a987f08105bbcdd6174" default)))
+ '(custom-safe-themes (quote ("04fd52af504d80a42d9487e3e6aa96b6937255d1" "" default)))
  '(debug-on-error t)
  '(font-lock-maximum-decoration t)
  '(global-font-lock-mode t)
  '(global-hl-line-mode t)
  '(global-linum-mode 1)
- '(hl-line-mode t)
+ '(hl-line-mode 1)
  '(inhibit-startup-screen t)
  '(mouse-yank-at-point t)
  '(recentf-mode 1)

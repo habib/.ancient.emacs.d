@@ -67,3 +67,12 @@
 [submodule "packages/android-mode"]
 	path = packages/android-mode
 	url = https://github.com/emacsmirror/android-mode.git
+[submodule "packages/clojure-mode"]
+	path = packages/clojure-mode
+	url = https://github.com/emacsmirror/clojure-mode.git
+[submodule "packages/paredit"]
+	path = packages/paredit
+	url = https://github.com/emacsmirror/paredit.git
+[submodule "packages/slime"]
+	path = packages/slime
+	url = https://github.com/emacsmirror/slime.git
