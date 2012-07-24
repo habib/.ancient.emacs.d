@@ -89,13 +89,7 @@
 ;(setq path-to-ctags (executable-find "ctags"))
 ;(setq tags-revert-without-query 1)
 
-;(require 'autopair)
-;(autopair-global-mode)
-
-;; Ruby has ruby-electric mode that does the same thing
-;; (add-hook 'ruby-mode-hook (lambda () (setq autopair-dont-activate t)))
-
-;; Modes in which Paredit should be active and Autopair shouldn't
+;; Modes in which Paredit should be active
 (setf modes-for-paredit '(emacs-lisp lisp inferior-lisp slime slime-repl repl))
 
 ;; Paredit
