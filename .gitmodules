@@ -28,9 +28,6 @@
 [submodule "packages/emacs-rails"]
 	path = packages/emacs-rails
 	url = https://github.com/remvee/emacs-rails.git
-[submodule "packages/rainbow-mode"]
-	path = packages/rainbow-mode
-	url = https://github.com/emacsmirror/rainbow-mode.git
 [submodule "packages/writegood-mode"]
 	path = packages/writegood-mode
 	url = https://github.com/emacsmirror/writegood-mode.git
@@ -76,3 +73,6 @@
 [submodule "installers/ess"]
 	path = installers/ess
 	url = https://github.com/emacsmirror/ess.git
+[submodule "packages/rainbow-mode"]
+	path = packages/rainbow-mode
+	url = https://github.com/emacsmirror/rainbow-mode.git
