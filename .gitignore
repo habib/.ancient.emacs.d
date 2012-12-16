@@ -9,3 +9,4 @@ abbrev_defs
 *.elc
 tramp
 .\#*
+ac-dict
