@@ -5,7 +5,7 @@ All OS: git, make, exuberant-ctags
 Mac: ack
 Debian: ack-grep
 
-* Clone this repository
+* Backup and remove your existing .emacs.d directory and then clone this repository
 Type: cd ~
 Type: git clone git@github.com:habib/.emacs.d.git
 Type: cd .emacs.d
@@ -14,11 +14,15 @@ Type: cd .emacs.d
 Type: git submodule init
 Type: git submodule update
 
-* Setup AutoComplete mode
+* Setting up AutoComplete mode is a bit more involved than I'd like it to be
 Type: mkdir ~/.emacs.d/packages/auto-complete
 Type: cd ~/.emacs.d/installers/auto-complete
+Type: cp ~/.emacs.d/packages/fuzzy-el/fuzzy.el .
+Type: cp ~/.emacs.d/packages/popup/popup.el .
 Type: make install
 When prompted, type: ~/.emacs.d/packages/auto-complete
-You don't need to add anything else.
+After this:
+Type: rm popup.el
+Type: rm fuzzy.el
 
 * Launch Emacs!
