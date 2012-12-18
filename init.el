@@ -212,6 +212,7 @@
 (require 'rainbow-delimiters)
 ; In Emacs 24+
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'paredit-mode-hook 'rainbow-delimiters-mode)
 
 ;; CSS mode
 (autoload 'css-mode "css-mode" nil t)
