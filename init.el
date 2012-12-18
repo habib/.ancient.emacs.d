@@ -208,6 +208,11 @@
 ;; or "rgba(1,2,3,0.5)"
 (require 'rainbow-mode)
 
+;; Rainbow delimiters
+(require 'rainbow-delimiters)
+; In Emacs 24+
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
 ;; CSS mode
 (autoload 'css-mode "css-mode" nil t)
 (add-hook 'css-mode-hook '(lambda ()
@@ -226,6 +231,13 @@
 
 ;; Load up Ruby and its related settings
  (require 'ruby-settings)
+
+(require 'nrepl)
+(add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)
+(add-to-list 'same-window-buffer-names "*nrepl*")
+(add-hook 'nrepl-mode-hook 'subword-mode)
+(add-hook 'nrepl-mode-hook 'paredit-mode)
+;(add-hook 'nrepl-mode-hook 'rainbow-delimiters-mode)
 
 ;; Load up JavaScript settings
 ;;(require 'javascript-settings)

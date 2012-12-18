@@ -82,3 +82,9 @@
 [submodule "packages/fuzzy-el"]
 	path = packages/fuzzy-el
 	url = https://github.com/auto-complete/fuzzy-el.git
+[submodule "packages/nrepl"]
+	path = packages/nrepl
+	url = https://github.com/emacsmirror/nrepl.git
+[submodule "packages/rainbow-delimiters"]
+	path = packages/rainbow-delimiters
+	url = https://github.com/emacsmirror/rainbow-delimiters.git
