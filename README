@@ -7,7 +7,7 @@ Debian: ack-grep
 
 * Backup and remove your existing .emacs.d directory and then clone this repository
 Type: cd ~
-Type: git clone git@github.com:habib/.emacs.d.git
+Type: git clone https://github.com/habib/.emacs.d.git
 Type: cd .emacs.d
 
 * Get all the submodules
