@@ -19,9 +19,7 @@
              (concat user-emacs-directory
                      (file-name-as-directory "themes")))
 
-;(byte-compile-file (concat user-emacs-directory "init.el"))
-;(byte-compile-file (concat user-emacs-directory "ruby-settings.el"))
-;(byte-recompile-directory user-emacs-directory 0)
+(byte-recompile-directory user-emacs-directory 0)
 
 ;; Reliable way to maximize the window on startup on Ubuntu. Sorta successful on a Mac with Emacs 24.
 (require 'maxframe)
@@ -97,7 +95,6 @@
 (mapc (lambda (mode)
 	(let ((hook (intern (concat (symbol-name mode)
 				    "-mode-hook"))))
-	  (add-hook hook (lambda () (setq autopair-dont-activate t)))
 	  (add-hook hook (lambda () (paredit-mode +1)))))
       modes-for-paredit)
 
