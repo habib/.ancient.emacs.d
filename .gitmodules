@@ -25,9 +25,6 @@
 [submodule "packages/ruby-compilation"]
 	path = packages/ruby-compilation
 	url = https://github.com/emacsmirror/ruby-compilation.git
-[submodule "packages/emacs-rails"]
-	path = packages/emacs-rails
-	url = https://github.com/remvee/emacs-rails.git
 [submodule "packages/writegood-mode"]
 	path = packages/writegood-mode
 	url = https://github.com/emacsmirror/writegood-mode.git

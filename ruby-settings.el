@@ -5,9 +5,6 @@
 (require 'rvm)
 (rvm-use-default)
 
-;; Emacs Rails
-(require 'rails)
-
 ;; For electric goodness!
 (require 'ruby-electric)
 (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
