@@ -103,7 +103,7 @@
 
 ;; Yasnippet mode - EVERYWHERE!
 (require 'yasnippet)
-(yas/global-mode 1)
+(yas-global-mode 1)
 
 ;; Auto-complete
 (require 'auto-complete-config)
@@ -147,6 +147,10 @@
         (if (eq (cdr pair) 'perl-mode)
             (setcdr pair 'cperl-mode)))
       (append auto-mode-alist interpreter-mode-alist))
+
+;; Volatile highlights
+(require 'volatile-highlights)
+(volatile-highlights-mode t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -100,3 +100,6 @@
 [submodule "packages/expand-region"]
 	path = packages/expand-region
 	url = https://github.com/emacsmirror/expand-region.git
+[submodule "packages/volatile-highlights"]
+	path = packages/volatile-highlights
+	url = https://github.com/emacsmirror/volatile-highlights.git
