@@ -223,6 +223,10 @@
 			    (setq css-indent-offset 2)
                             (rainbow-mode)))
 
+;; Expand region
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 ;; Sass-mode
 (require 'sass-mode)
 (autoload 'sass-mode "sass-mode" nil t)
