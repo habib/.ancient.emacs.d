@@ -130,17 +130,13 @@
 ;; Android mode
 (require 'android-mode)
 
-;; Ack
-(autoload 'ack-same "full-ack" nil t)
-(autoload 'ack "full-ack" nil t)
-(autoload 'ack-find-same-file "full-ack" nil t)
-(autoload 'ack-find-file "full-ack" nil t)
-;; In Debian, ack is installed as ack-grep
-(if (equal system-type 'gnu/linux)
-  (defcustom ack-executable (executable-find "ack-grep")
-    "*The location of the ack executable."
-    :group 'full-ack
-    :type 'file))
+;; Ack and a half
+(require 'ack-and-a-half)
+;; Create shorter aliases
+(defalias 'ack 'ack-and-a-half)
+(defalias 'ack-same 'ack-and-a-half-same)
+(defalias 'ack-find-file 'ack-and-a-half-find-file)
+(defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
 
 ;; Use cperl-mode instead of perl-mode
 (mapc (lambda (pair)

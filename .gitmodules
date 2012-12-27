@@ -34,9 +34,6 @@
 [submodule "packages/yasnippet"]
 	path = packages/yasnippet
 	url = https://github.com/capitaomorte/yasnippet.git
-[submodule "packages/full-ack"]
-	path = packages/full-ack
-	url = https://github.com/emacsmirror/full-ack.git
 [submodule "packages/ruby-electric"]
 	path = packages/ruby-electric
 	url = https://github.com/emacsmirror/ruby-electric.git
@@ -103,3 +100,6 @@
 [submodule "packages/volatile-highlights"]
 	path = packages/volatile-highlights
 	url = https://github.com/emacsmirror/volatile-highlights.git
+[submodule "packages/ack-and-a-half"]
+	path = packages/ack-and-a-half
+	url = https://github.com/emacsmirror/ack-and-a-half.git
