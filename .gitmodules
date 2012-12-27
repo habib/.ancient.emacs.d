@@ -85,3 +85,6 @@
 [submodule "packages/rainbow-delimiters"]
 	path = packages/rainbow-delimiters
 	url = https://github.com/emacsmirror/rainbow-delimiters.git
+[submodule "packages/yari"]
+	path = packages/yari
+	url = https://github.com/emacsmirror/yari.git
