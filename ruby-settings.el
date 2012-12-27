@@ -24,6 +24,13 @@
      (require 'ruby-block)
      (ruby-block-mode t)))
 
+(defun ruby-insert-end ()
+ "Insert \"end\" at point and reindent current line."
+ (interactive)
+ (insert "end")
+ (ruby-indent-line t)
+ (end-of-line))
+
 (require 'yari)
 (defun ri-bind-key ()
   (local-set-key [f1] 'yari))
