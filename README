@@ -15,3 +15,4 @@ Type: git submodule init
 Type: git submodule update
 
 * Launch Emacs!
+(And don't worry about the compilation warnings)
