@@ -176,6 +176,11 @@
  '(truncate-lines t)
  '(visible-bell t))
 
+;; Make the fringe (gutter) smaller
+;; the argument is a width in pixels (the default is 8)
+(if (fboundp 'fringe-mode)
+    (fringe-mode 4))
+
 ;; Uniquify buffers this way
 (require 'uniquify)
 (setq
@@ -233,6 +238,9 @@
 
 ;; Load up JavaScript settings
 (require 'javascript-settings)
+
+;; Load up XML settings
+(require 'xml-settings)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
