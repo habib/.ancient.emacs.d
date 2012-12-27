@@ -13,8 +13,8 @@
 [submodule "packages/coffee-mode"]
 	path = packages/coffee-mode
 	url = https://github.com/emacsmirror/coffee-mode.git
-[submodule "installers/auto-complete"]
-	path = installers/auto-complete
+[submodule "packages/auto-complete"]
+	path = packages/auto-complete
 	url = https://github.com/emacsmirror/auto-complete
 [submodule "packages/ruby-block"]
 	path = packages/ruby-block

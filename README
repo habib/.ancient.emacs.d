@@ -14,15 +14,4 @@ Type: cd .emacs.d
 Type: git submodule init
 Type: git submodule update
 
-* Setting up AutoComplete mode is a bit more involved than I'd like it to be
-Type: mkdir ~/.emacs.d/packages/auto-complete
-Type: cd ~/.emacs.d/installers/auto-complete
-Type: cp ~/.emacs.d/packages/fuzzy-el/fuzzy.el .
-Type: cp ~/.emacs.d/packages/popup/popup.el .
-Type: make install
-When prompted, type: ~/.emacs.d/packages/auto-complete
-After this:
-Type: rm popup.el
-Type: rm fuzzy.el
-
 * Launch Emacs!
