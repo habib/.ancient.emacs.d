@@ -119,7 +119,7 @@ exec-to-string command, but it works and seems fast"
 (setq feature-default-language "en")
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 (require 'feature-mode)
-(yas/load-directory (concat user-emacs-directory
+(yas-load-directory (concat user-emacs-directory
                             "packages/feature-mode/snippets"))
 
 ;; ;; Rinari mode
@@ -145,36 +145,5 @@ exec-to-string command, but it works and seems fast"
 ;;   (interactive)
 ;;   (shell-command
 ;;    (format "%s -f %s/TAGS -e -R %s" path-to-ctags (textmate-project-root) (directory-file-name (textmate-project-root)))))
-
-;;;;;;;;;;;;;;;;;;
-
-;; ;; Ruby mode settings
-;; (add-hook 'ruby-mode-hook
-;; 	  (lambda()
-;; 	    (add-hook 'local-write-file-hooks
-;; 		      '(lambda()
-;; 			 (save-excursion
-;; 			   (untabify (point-min) (point-max))
-;; 			   (delete-trailing-whitespace))))
-;; 	    (set (make-local-variable 'indent-tabs-mode) 'nil)
-;; 	    (set (make-local-variable 'tab-width) 2)
-;; 	    (imenu-add-to-menubar "IMENU")
-;; 	    (setq ruby-deep-indent-paren nil)
-;; 	    (setq c-tab-always-indent nil)
-;; 	    (setq ruby-deep-arglist t)
-;; 	    (define-key ruby-mode-map "\C-m" 'newline-and-indent)
-;; ;;	    (unless (file-exists-p (concat (textmate-project-root) "/TAGS"))
-;; ;;	      (create-project-tags))
-;; ))
-
-;; ;; ;; Install mode-compile to give friendlier compiling support!
-;; ;; (require 'mode-compile)
-;; ;; (require 'mode-compile-kill)
-;; ;; (autoload 'mode-compile "mode-compile"
-;; ;;   "Command to compile current buffer file based on the major mode" t)
-;; ;; (global-set-key "\C-cc" 'mode-compile)
-;; ;; (autoload 'mode-compile-kill "mode-compile"
-;; ;;   "Command to kill a compilation launched by `mode-compile'" t)
-;; ;; (global-set-key "\C-ck" 'mode-compile-kill)
 
 (provide 'ruby-settings)
