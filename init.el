@@ -52,9 +52,6 @@
 ;; Load up Tramp
 (require 'tramp)
 
-;; Clojure mode
-(require 'clojure-mode)
-
 ;; Startup IDo
 (require 'ido)
 (ido-mode t)
@@ -234,17 +231,14 @@
 ;; Load up Ruby and its related settings
  (require 'ruby-settings)
 
-(require 'nrepl)
-(add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)
-(add-to-list 'same-window-buffer-names "*nrepl*")
-(add-hook 'nrepl-mode-hook 'subword-mode)
-(add-hook 'nrepl-mode-hook 'paredit-mode)
-
 ;; Load up JavaScript settings
 (require 'javascript-settings)
 
 ;; Load up XML settings
 (require 'xml-settings)
+
+;; Load up Clojure settings
+(require 'clojure-settings)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
