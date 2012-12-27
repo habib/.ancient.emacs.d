@@ -109,3 +109,9 @@
 [submodule "packages/jump"]
 	path = packages/jump
 	url = https://github.com/emacsmirror/jump.git
+[submodule "packages/espuds"]
+	path = packages/espuds
+	url = https://github.com/emacsmirror/espuds.git
+[submodule "packages/elunit"]
+	path = packages/elunit
+	url = https://github.com/emacsattic/elunit.git
