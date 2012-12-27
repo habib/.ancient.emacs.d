@@ -91,3 +91,9 @@
 [submodule "packages/ruby-tools"]
 	path = packages/ruby-tools
 	url = https://github.com/emacsmirror/ruby-tools.git
+[submodule "packages/el-expectations"]
+	path = packages/el-expectations
+	url = https://github.com/emacsmirror/el-expectations.git
+[submodule "packages/el-mock"]
+	path = packages/el-mock
+	url = https://github.com/emacsmirror/el-mock.git
