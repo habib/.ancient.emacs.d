@@ -64,9 +64,6 @@
 [submodule "packages/slime"]
 	path = packages/slime
 	url = https://github.com/emacsmirror/slime.git
-[submodule "installers/ess"]
-	path = installers/ess
-	url = https://github.com/emacsmirror/ess.git
 [submodule "packages/rainbow-mode"]
 	path = packages/rainbow-mode
 	url = https://github.com/emacsmirror/rainbow-mode.git

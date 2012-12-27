@@ -11,10 +11,6 @@
                                (file-name-as-directory "packages"))
                        'full))
 
-(add-to-list 'load-path
-             (concat user-emacs-directory
-                     "installers/ess/lisp"))
-
 (add-to-list 'custom-theme-load-path
              (concat user-emacs-directory
                      (file-name-as-directory "themes")))
@@ -63,9 +59,6 @@
 (defun ido-complete-hook ()
   (define-key ido-completion-map [tab] 'ido-complete))
 (add-hook 'ido-setup-hook 'ido-complete-hook)
-
-;; ESS
-(require 'ess-site)
 
 ;; YAML mode
 (require 'yaml-mode)
