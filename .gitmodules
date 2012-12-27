@@ -88,3 +88,6 @@
 [submodule "packages/yari"]
 	path = packages/yari
 	url = https://github.com/emacsmirror/yari.git
+[submodule "packages/ruby-tools"]
+	path = packages/ruby-tools
+	url = https://github.com/emacsmirror/ruby-tools.git
