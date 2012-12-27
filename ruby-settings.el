@@ -119,11 +119,11 @@ exec-to-string command, but it works and seems fast"
 (setq feature-default-language "en")
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 (require 'feature-mode)
-(yas-load-directory (concat user-emacs-directory
+(yas/load-directory (concat user-emacs-directory
                             "packages/feature-mode/snippets"))
 
-;; ;; Rinari mode
-;; (require 'rinari)
+;; Rinari mode
+(require 'rinari)
 ;; (setq rinari-tags-file-name "TAGS")
 ;; (setq rinari-major-modes
 ;;       (list 'mumamo-after-change-major-mode-hook 'dired-mode-hook 'ruby-mode-hook
