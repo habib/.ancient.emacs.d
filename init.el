@@ -222,11 +222,6 @@
 (require 'sass-mode)
 (autoload 'sass-mode "sass-mode" nil t)
 
-;; CoffeeScript mode
-(require 'coffee-mode)
-(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
-(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
-
 ;; Load up Ruby and its related settings
  (require 'ruby-settings)
 
@@ -235,10 +230,10 @@
 (add-to-list 'same-window-buffer-names "*nrepl*")
 (add-hook 'nrepl-mode-hook 'subword-mode)
 (add-hook 'nrepl-mode-hook 'paredit-mode)
-;(add-hook 'nrepl-mode-hook 'rainbow-delimiters-mode)
 
 ;; Load up JavaScript settings
-;;(require 'javascript-settings)
+(require 'javascript-settings)
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
