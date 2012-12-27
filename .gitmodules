@@ -106,3 +106,6 @@
 [submodule "packages/rinari"]
 	path = packages/rinari
 	url = https://github.com/eschulte/rinari.git
+[submodule "packages/jump"]
+	path = packages/jump
+	url = https://github.com/emacsmirror/jump.git
