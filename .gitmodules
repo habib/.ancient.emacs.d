@@ -109,3 +109,6 @@
 [submodule "packages/elunit"]
 	path = packages/elunit
 	url = https://github.com/emacsattic/elunit.git
+[submodule "packages/python-mode"]
+	path = packages/python-mode
+	url = https://github.com/emacsmirror/python-mode.git

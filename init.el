@@ -233,6 +233,9 @@
 ;; Load up Clojure settings
 (require 'clojure-settings)
 
+;; Load up Python settings
+(require 'python-settings)
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
