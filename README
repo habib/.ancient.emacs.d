@@ -1,9 +1,15 @@
 This is my .emacs.d folder
 
 * Prerequisites
-All OS: git, make, exuberant-ctags, rvm
+All OS: git, exuberant-ctags
 Mac: ack
 Debian: ack-grep
+
+For programming in Ruby you need:
+RVM and a ruby
+
+For programming in Python you need:
+python, ipython, pep8, pylint
 
 * Backup and remove your existing .emacs.d directory and then clone this repository
 Type: cd ~

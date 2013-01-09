@@ -2,8 +2,8 @@
 (require 'python-mode)
 
 ;; use IPython
-(setq-default py-shell-name "python")
-(setq-default py-which-bufname "Python")
+(setq-default py-shell-name "ipython")
+(setq-default py-which-bufname "IPython")
 ;; ; use the wx backend, for both mayavi and matplotlib
 ;; (setq py-python-command-args
 ;;   '("--gui=wx" "--pylab=wx" "-colors" "Linux"))
@@ -16,5 +16,8 @@
 (setq py-split-windows-on-execute-p t)
 ;; try to automagically figure out indentation
 (setq py-smart-indentation t)
+
+(require 'python-pep8)
+(require 'python-pylint)
 
 (provide 'python-settings)
