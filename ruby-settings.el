@@ -109,6 +109,7 @@ exec-to-string command, but it works and seems fast"
 (require 'rhtml-mode)
 ; put rhtml templates into rhtml-mode
 (setq auto-mode-alist  (cons '("\\.erb$" . rhtml-mode) auto-mode-alist))
+(setq auto-mode-alist  (cons '("\\.rhtml$" . rhtml-mode) auto-mode-alist))
 ; put any rjs scripts into ruby-mode, as they are basically ruby
 (setq auto-mode-alist  (cons '("\\.rjs$" . ruby-mode) auto-mode-alist))
 

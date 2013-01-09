@@ -1,7 +1,7 @@
 This is my .emacs.d folder
 
 * Prerequisites
-All OS: git, make, exuberant-ctags
+All OS: git, make, exuberant-ctags, rvm
 Mac: ack
 Debian: ack-grep
 
