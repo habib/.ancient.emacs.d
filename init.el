@@ -1,8 +1,8 @@
-;; When started as a GUI app on Mac OS X, Emacs doesn't pick up environment variables
-(add-to-list 'exec-path (getenv "PATH"))
+;; When started as a GUI app on Mac OS X, Emacs doesn't pick up environment variables. I use ZSH. Change for your shell
 
-;; Mac Hack to add these folders to the path
-(push "/usr/local/bin" exec-path)
+(setq path (shell-command-to-string "source $HOME/.zshrc && printf $PATH"))
+(setenv "PATH" path)
+(setq exec-path (split-string path ":"))
 
 ;; All the packages should be placed under the packages folder. Add them all.
 (mapc (lambda (dir)
@@ -235,6 +235,14 @@
 
 ;; Load up Python settings
 (require 'python-settings)
+
+(autoload 'sml-mode  "sml-mode" "Major mode for editing SML." t)
+(autoload 'run-sml "sml-proc" "Run an inferior SML process." t)
+(setq auto-mode-alist
+      (cons '("\.sml$" . sml-mode)
+            (cons '("\.sig$" . sml-mode)
+                  auto-mode-alist)))
+(setq sml-program-name "sml")
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
