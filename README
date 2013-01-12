@@ -1,4 +1,4 @@
-This is my .emacs.d folder
+This is my .emacs.d folder. I use it program in Ruby, JavaScript and the occasional Python or SML.
 
 * Prerequisites
 All OS: git, exuberant-ctags
@@ -10,6 +10,10 @@ RVM and a ruby
 
 For programming in Python you need:
 python, ipython, pep8, pylint
+
+For programming in SML you need to install sml/nj
+
+Comment out the lines you aren't interested in.
 
 * Backup and remove your existing .emacs.d directory and then clone this repository
 Type: cd ~
