@@ -22,9 +22,6 @@
 [submodule "packages/rvm"]
 	path = packages/rvm
 	url = https://github.com/habib/rvm.el.git
-[submodule "packages/ruby-compilation"]
-	path = packages/ruby-compilation
-	url = https://github.com/habib/ruby-compilation.git
 [submodule "packages/writegood-mode"]
 	path = packages/writegood-mode
 	url = https://github.com/emacsmirror/writegood-mode.git
