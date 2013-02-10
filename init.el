@@ -17,6 +17,9 @@
 
 (byte-recompile-directory user-emacs-directory 0)
 
+;; Keyboard shortcuts
+(global-set-key [(control j)] 'join-line)
+
 ;; Reliable way to maximize the window on startup on Ubuntu. Sorta successful on a Mac with Emacs 24.
 (require 'maxframe)
 (add-hook 'window-setup-hook 'maximize-frame t)
@@ -26,16 +29,11 @@
 
 ;; Trailing whitespace should be banned
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
 (setq whitespace-style '(trailing space-before-tab indentation space-after-tab))
 
 ;; Use spaces for indentation
 (setq indent-tabs-mode nil)
 (setq-default indent-tabs-mode nil)
-
-;; Remove the toolbar
-(if (fboundp 'tool-bar-mode)
-    (tool-bar-mode -1))
 
 ;; I don't like to type yes. y should suffice
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -158,7 +156,7 @@
  '(mouse-yank-at-point t)
  '(recentf-mode 1)
  '(save-place t nil (saveplace))
- '(scroll-bar-mode (quote right))
+ '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(size-indication-mode t)
  '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify)))
@@ -222,7 +220,7 @@
 (autoload 'sass-mode "sass-mode" nil t)
 
 ;; Load up Ruby and its related settings
- (require 'ruby-settings)
+(require 'ruby-settings)
 
 ;; Load up JavaScript settings
 (require 'javascript-settings)
