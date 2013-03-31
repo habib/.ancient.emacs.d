@@ -124,3 +124,6 @@
 [submodule "packages/scala-mode2"]
 	path = packages/scala-mode2
 	url = https://github.com/hvesalai/scala-mode2.git
+[submodule "packages/findr"]
+	path = packages/findr
+	url = https://github.com/emacsmirror/findr.git
