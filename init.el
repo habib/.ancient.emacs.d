@@ -243,6 +243,9 @@
 (setq sml-program-name "sml")
 
 (require 'scala-mode2)
+(add-to-list 'load-path "~/ensime/elisp")
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
