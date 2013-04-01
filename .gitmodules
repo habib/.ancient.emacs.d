@@ -127,3 +127,6 @@
 [submodule "packages/findr"]
 	path = packages/findr
 	url = https://github.com/emacsmirror/findr.git
+[submodule "packages/go-mode"]
+	path = packages/go-mode
+	url = https://github.com/dominikh/go-mode.el.git

@@ -234,6 +234,10 @@
 ;; Load up Python settings
 (require 'python-settings)
 
+;; Load up Golang mode
+(require 'go-mode)
+
+;; Load up SML mode
 (autoload 'sml-mode  "sml-mode" "Major mode for editing SML." t)
 (autoload 'run-sml "sml-proc" "Run an inferior SML process." t)
 (setq auto-mode-alist
