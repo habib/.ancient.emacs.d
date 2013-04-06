@@ -89,6 +89,9 @@
 (defun turn-on-paredit () (paredit-mode 1))
 (add-hook 'clojure-mode-hook 'turn-on-paredit)
 
+;; Autopair mode
+(require 'autopair)
+
 ;; Yasnippet mode - EVERYWHERE!
 (require 'yasnippet)
 (yas-global-mode 1)
