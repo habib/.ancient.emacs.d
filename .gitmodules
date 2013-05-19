@@ -133,3 +133,6 @@
 [submodule "packages/autopair"]
 	path = packages/autopair
 	url = https://github.com/emacsmirror/autopair.git
+[submodule "packages/powerline"]
+	path = packages/powerline
+	url = https://github.com/milkypostman/powerline.git
