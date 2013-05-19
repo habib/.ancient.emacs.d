@@ -136,3 +136,6 @@
 [submodule "packages/powerline"]
 	path = packages/powerline
 	url = https://github.com/milkypostman/powerline.git
+[submodule "packages/ac-nrepl"]
+	path = packages/ac-nrepl
+	url = https://github.com/purcell/ac-nrepl.git
