@@ -25,3 +25,4 @@ tramp
 /.emacs.desktop
 /.emacs.desktop.lock
 packages/*/*.elc
+nrepl-history
