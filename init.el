@@ -152,7 +152,9 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (zenburn)))
- '(custom-safe-themes (quote ("b9df72e7a22e3fdf85eb6c5d80dfee43a28d3e643ed07a987f08105bbcdd6174" "04fd52af504d80a42d9487e3e6aa96b6937255d1" "" default)))
+ '(custom-safe-themes
+   (quote
+    ("b9df72e7a22e3fdf85eb6c5d80dfee43a28d3e643ed07a987f08105bbcdd6174" default)))
  '(debug-on-error t)
  '(font-lock-maximum-decoration t)
  '(global-font-lock-mode t)

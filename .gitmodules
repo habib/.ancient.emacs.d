@@ -139,3 +139,9 @@
 [submodule "packages/ac-nrepl"]
 	path = packages/ac-nrepl
 	url = https://github.com/purcell/ac-nrepl.git
+[submodule "packages/cl-lib"]
+	path = packages/cl-lib
+	url = https://github.com/emacsmirror/cl-lib.git
+[submodule "packages/inf-ruby"]
+	path = packages/inf-ruby
+	url = https://github.com/emacsmirror/inf-ruby.git
