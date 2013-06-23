@@ -1,9 +1,13 @@
 ;; Haml mode
 (require 'haml-mode)
 
-;; RVM
-(require 'rvm)
-(rvm-use-default)
+;; RVM - it is still here if you need it.
+;(require 'rvm)
+;(rvm-use-default)
+
+;; RBENV
+(require 'rbenv)
+(global-rbenv-mode)
 
 ;; For electric goodness!
 (require 'ruby-electric)
