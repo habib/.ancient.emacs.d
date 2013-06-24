@@ -9,9 +9,13 @@
 (require 'rbenv)
 (global-rbenv-mode)
 
+(defalias 'inf-ruby-keys 'inf-ruby-setup-keybindings)
+
 ;; For electric goodness!
 (require 'ruby-electric)
-(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
+(add-hook 'ruby-mode-hook (lambda ()
+                            (require 'ruby-electric)
+                            (ruby-electric-mode t)))
 
 (eval-after-load 'ruby-mode
   '(progn
@@ -27,13 +31,6 @@
      (ruby-tools-mode +1)
      (require 'ruby-block)
      (ruby-block-mode t)))
-
-(defun ruby-insert-end ()
- "Insert \"end\" at point and reindent current line."
- (interactive)
- (insert "end")
- (ruby-indent-line t)
- (end-of-line))
 
 (require 'yari)
 (defun ri-bind-key ()
