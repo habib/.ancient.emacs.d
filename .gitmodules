@@ -151,3 +151,6 @@
 [submodule "ensime"]
 	path = ensime
 	url = https://github.com/aemoncannon/ensime.git
+[submodule "packages/helm"]
+	path = packages/helm
+	url = https://github.com/emacs-helm/helm.git

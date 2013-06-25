@@ -46,17 +46,25 @@
 ;; Load up Tramp
 (require 'tramp)
 
+;; Startup Helm
+; Lot's to learn in Helm. Go here: https://github.com/emacs-helm/helm/wiki
+(require 'helm-config)
+(helm-mode 1)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(setq enable-recursive-minibuffers t)
+
 ;; Startup IDo
-(require 'ido)
-(ido-mode t)
-(ido-everywhere t)
-(setq ido-enable-prefix nil
-      ido-enable-flex-matching t
-      ido-create-new-buffer 'always
-      ido-max-prospects 10)
-(defun ido-complete-hook ()
-  (define-key ido-completion-map [tab] 'ido-complete))
-(add-hook 'ido-setup-hook 'ido-complete-hook)
+; IDo is around if Helm gets too annoying
+;(require 'ido)
+;(ido-mode t)
+;(ido-everywhere t)
+;(setq ido-enable-prefix nil
+;      ido-enable-flex-matching t
+;      ido-create-new-buffer 'always
+;      ido-max-prospects 10)
+;(defun ido-complete-hook ()
+;  (define-key ido-completion-map [tab] 'ido-complete))
+;(add-hook 'ido-setup-hook 'ido-complete-hook)
 
 ;; YAML mode
 (require 'yaml-mode)
