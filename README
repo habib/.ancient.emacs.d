@@ -13,10 +13,7 @@ python, ipython, pep8, pylint
 
 For programming in SML you need to install sml/nj
 
-For programming in Scala you need to install Ensime from https://github.com/aemoncannon/ensime/
-Extract it to a folder called ensime in your home folder.
-
-Comment out the lines you aren't interested in.
+Comment out the lines in the .emacs.d that you aren't interested in.
 
 * Backup and remove your existing .emacs.d directory and then clone this repository
 Type: cd ~

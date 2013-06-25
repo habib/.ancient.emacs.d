@@ -1,6 +1,6 @@
-(setq ensime-path (expand-file-name "~/ensime/src/main/elisp/"))
-(byte-recompile-directory ensime-path 0)
-(add-to-list 'load-path ensime-path)
+(add-to-list 'load-path
+             (concat user-emacs-directory
+                     (file-name-as-directory "ensime/src/main/elisp")))
 
 (require 'scala-mode2)
 (add-hook 'scala-mode-hook
