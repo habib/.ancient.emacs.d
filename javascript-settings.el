@@ -1,12 +1,22 @@
 ;; Due to mode-name aliasing Auto-complete cannot find js-mode. Hence make a symlink
 (shell-command "ln -s ~/.emacs.d/packages/auto-complete/ac-dict/javascript-mode ~/.emacs.d/packages/auto-complete/ac-dict/js-mode")
 
+;; Node
+(require 'js-comint)
+(setq inferior-js-program-command "node") ;; not "node-repl"
+(setenv "NODE_NO_READLINE" "1")
+
 (add-hook 'js-mode-hook
           (lambda ()
             ;; Scan the file for nested code blocks
             (imenu-add-menubar-index)
             ;; Activate the folding mode
-            (hs-minor-mode t)))
+            (hs-minor-mode t)
+            (local-set-key "\C-x\C-e" 'js-send-last-sexp)
+            (local-set-key "\C-\M-x" 'js-send-last-sexp-and-go)
+            (local-set-key "\C-cb" 'js-send-buffer)
+            (local-set-key "\C-c\C-b" 'js-send-buffer-and-go)
+            (local-set-key "\C-cl" 'js-load-file-and-go)))
 
 ;; CoffeeScript mode
 (require 'coffee-mode)
