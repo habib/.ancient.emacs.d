@@ -66,6 +66,19 @@
 ;  (define-key ido-completion-map [tab] 'ido-complete))
 ;(add-hook 'ido-setup-hook 'ido-complete-hook)
 
+;; Setup Ctags
+;(setq path-to-ctags (executable-find "ctags"))
+;(setq tags-revert-without-query 1)
+
+;; Textmate mode
+;(require 'textmate)
+;(textmate-mode)
+
+;; Setup Projectile
+(require 'projectile)
+(projectile-global-mode)
+(global-set-key (kbd "C-c h") 'helm-projectile)
+
 ;; YAML mode
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
@@ -78,10 +91,6 @@
 (add-hook 'yaml-mode-hook
           '(lambda ()
              (define-key yaml-mode-map (kbd "C-c C-p") 'yaml-path/path)))
-
-;; Setup Ctags
-;(setq path-to-ctags (executable-find "ctags"))
-;(setq tags-revert-without-query 1)
 
 ;; Modes in which Paredit should be active
 (setf modes-for-paredit '(emacs-lisp lisp inferior-lisp slime slime-repl repl))
@@ -121,10 +130,6 @@
 (setq x-select-enable-clipboard t)
 (if (functionp 'x-cut-buffer-or-selection-value)
     (setq interprogram-paste-function 'x-cut-buffer-or-selection-value))
-
-;; Textmate mode
-(require 'textmate)
-(textmate-mode)
 
 ;; Android mode
 (require 'android-mode)

@@ -1,19 +1,19 @@
 This is my .emacs.d folder. I use it program in Ruby, JavaScript and the occasional Python or SML.
 
 * Prerequisites
-All OS: git, exuberant-ctags
+All OS: git (d'oh), exuberant-ctags
 Mac: ack
 Debian: ack-grep
 
 For programming in Ruby you need:
-RVM and a ruby
+rbenv (or RVM) and a Ruby
 
 For programming in Python you need:
 python, ipython, pep8, pylint
 
 For programming in SML you need to install sml/nj
 
-Comment out the lines in the .emacs.d that you aren't interested in.
+Comment out the lines in .emacs.d that don't interest you.
 
 * Backup and remove your existing .emacs.d directory and then clone this repository
 Type: cd ~
