@@ -166,3 +166,18 @@
 [submodule "packages/dash"]
 	path = packages/dash
 	url = https://github.com/emacsmirror/dash.git
+[submodule "packages/ruby-hash-syntax"]
+	path = packages/ruby-hash-syntax
+	url = https://github.com/emacsmirror/ruby-hash-syntax.git
+[submodule "packages/flymake-easy"]
+	path = packages/flymake-easy
+	url = https://github.com/purcell/flymake-easy.git
+[submodule "packages/flymake-ruby"]
+	path = packages/flymake-ruby
+	url = https://github.com/purcell/flymake-ruby.git
+[submodule "packages/flymake-yaml"]
+	path = packages/flymake-yaml
+	url = https://github.com/emacsmirror/flymake-yaml.git
+[submodule "packages/robe"]
+	path = packages/robe
+	url = https://github.com/dgutov/robe.git

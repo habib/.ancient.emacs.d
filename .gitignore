@@ -26,3 +26,4 @@ tramp
 /.emacs.desktop.lock
 packages/*/*.elc
 nrepl-history
+projectile-bookmarks.eld

@@ -83,6 +83,8 @@
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
+(require 'flymake-yaml)
+(add-hook 'yaml-mode-hook 'flymake-yaml-load)
 (add-hook 'yaml-mode-hook
           '(lambda ()
              (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
@@ -115,8 +117,10 @@
 
 ;; Auto-complete
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/packages/auto-complete/ac-dict")
-(ac-config-default)
+(auto-complete-mode 1)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/packages/auto-complete/dict")
+;(ac-config-default)
+(global-auto-complete-mode)
 
 ;; I don't want those temporary files
 (setq make-backup-files nil)
