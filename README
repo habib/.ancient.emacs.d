@@ -21,8 +21,7 @@ Type: git clone https://github.com/habib/.emacs.d.git
 Type: cd .emacs.d
 
 * Get all the submodules
-Type: git submodule init
-Type: git submodule update
+Type: git submodule update --init
 
 * Launch Emacs!
 (And don't worry about the compilation warnings)
