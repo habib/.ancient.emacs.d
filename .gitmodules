@@ -118,9 +118,6 @@
 [submodule "packages/sml-mode"]
 	path = packages/sml-mode
 	url = https://github.com/emacsmirror/sml-mode.git
-[submodule "packages/ruby-compilation"]
-	path = packages/ruby-compilation
-	url = https://github.com/habib/ruby-compilation.git
 [submodule "packages/scala-mode2"]
 	path = packages/scala-mode2
 	url = https://github.com/hvesalai/scala-mode2.git
