@@ -38,6 +38,7 @@
      (setq ruby-use-encoding-map nil)
      (require 'inf-ruby)
      (add-hook 'ruby-mode-hook 'inf-ruby-keys)
+     (inf-ruby-switch-setup)
      (add-hook 'ruby-mode-hook 'flymake-ruby-load)
      (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
      (define-key ruby-mode-map (kbd "C-M-h") 'backward-kill-word)
@@ -145,12 +146,10 @@
                             "packages/feature-mode/snippets"))
 
 ;; Rinari mode
-;; (require 'rinari)
-;; (setq rinari-tags-file-name "TAGS")
-;; (setq rinari-major-modes
-;;       (list 'mumamo-after-change-major-mode-hook 'dired-mode-hook 'ruby-mode-hook
-;;             'css-mode-hook 'yaml-mode-hook 'javascript-mode-hook))
-
+(require 'rinari)
+(setq rinari-tags-file-name "TAGS")
+(setq rinari-major-modes
+      '(mumamo-after-change-major-mode-hook dired-mode-hook ruby-mode-hook css-mode-hook yaml-mode-hook javascript-mode-hook))
 
 ;; ;; RSense
 ;; (setq rsense-home (expand-file-name "~/opt/rsense-0.3"))
