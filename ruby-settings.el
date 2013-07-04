@@ -131,11 +131,12 @@
 ;; FIX ME
 ;; Rspec mode
 (require 'rspec-mode)
-(setq rspec-use-rvm t)
+;(setq rspec-use-rvm t)
+(rspec-install-snippets)
 
 ;; Shoulda mode
-(require 'shoulda-mode)
-(setq shoulda-use-rvm t)
+;(require 'shoulda-mode)
+;(setq shoulda-use-rvm t)
 
 ;; Cucumber feature
 ;; Set the default language to English if .feature doesn't have "# language: en"
