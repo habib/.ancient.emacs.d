@@ -1,9 +1,6 @@
 [submodule "packages/maxframe"]
 	path = packages/maxframe
 	url = https://github.com/rmm5t/maxframe.el.git
-[submodule "packages/textmate"]
-	path = packages/textmate
-	url = https://github.com/emacsmirror/textmate.git
 [submodule "packages/yaml-mode"]
 	path = packages/yaml-mode
 	url = https://github.com/emacsmirror/yaml-mode.git

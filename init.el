@@ -76,10 +76,6 @@
 ;(setq path-to-ctags (executable-find "ctags"))
 ;(setq tags-revert-without-query 1)
 
-;; Textmate mode
-;(require 'textmate)
-;(textmate-mode)
-
 ;; Setup Projectile
 (require 'projectile)
 (projectile-global-mode)
