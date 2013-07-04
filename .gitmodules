@@ -190,3 +190,6 @@
 [submodule "packages/request"]
 	path = packages/request
 	url = https://github.com/emacsmirror/request.git
+[submodule "packages/deferred"]
+	path = packages/deferred
+	url = https://github.com/emacsmirror/deferred.git
