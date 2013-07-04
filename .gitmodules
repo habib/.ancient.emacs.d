@@ -175,3 +175,18 @@
 [submodule "packages/robe"]
 	path = packages/robe
 	url = https://github.com/dgutov/robe.git
+[submodule "packages/gh-el"]
+	path = packages/gh-el
+	url = https://github.com/sigma/gh.el.git
+[submodule "packages/pcache"]
+	path = packages/pcache
+	url = https://github.com/sigma/pcache.git
+[submodule "packages/logito"]
+	path = packages/logito
+	url = https://github.com/sigma/logito.git
+[submodule "packages/gist"]
+	path = packages/gist
+	url = https://github.com/emacsmirror/gist.git
+[submodule "packages/request"]
+	path = packages/request
+	url = https://github.com/emacsmirror/request.git
