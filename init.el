@@ -31,6 +31,12 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq whitespace-style '(trailing space-before-tab indentation space-after-tab))
 
+;; Lines shouldn't be too long
+(require 'whitespace)
+(setq whitespace-line-column 80)
+(setq whitespace-style '(face lines-tail))
+(add-hook 'prog-mode-hook 'whitespace-mode)
+
 ;; Use spaces for indentation
 (setq indent-tabs-mode nil)
 (setq-default indent-tabs-mode nil)
