@@ -193,3 +193,6 @@
 [submodule "packages/deferred"]
 	path = packages/deferred
 	url = https://github.com/emacsmirror/deferred.git
+[submodule "packages/elixir-mode"]
+	path = packages/elixir-mode
+	url = https://github.com/elixir-lang/emacs-elixir

@@ -280,6 +280,22 @@
 ;; Gist!
 (require 'gist)
 
+;; Elixir mode
+(require 'elixir-mode)
+
+(defun elixir-mode-compile-on-save ()
+  "Elixir mode compile files on save."
+    (and (file-exists (buffer-file-name))
+         (file-exists (elixir-mode-compiled-file-name))
+             (elixir-cos-mode t)))
+(add-hook 'elixir-mode-hook 'elixir-mode-compile-on-save)
+(add-to-list 'elixir-mode-hook
+             (defun auto-activate-ruby-end-mode-for-elixir-mode ()
+               (set (make-variable-buffer-local 'ruby-end-expand-keywords-before-re)
+                    "\\(?:^\\|\\s-+\\)\\(?:do\\)")
+               (set (make-variable-buffer-local 'ruby-end-check-statement-modifiers) nil)
+               (ruby-end-mode +1)))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
