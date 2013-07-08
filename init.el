@@ -296,6 +296,9 @@
                (set (make-variable-buffer-local 'ruby-end-check-statement-modifiers) nil)
                (ruby-end-mode +1)))
 
+;; Add flymake-cursor for better errors
+(eval-after-load 'flymake '(require 'flymake-cursor))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

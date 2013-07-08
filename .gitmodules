@@ -196,3 +196,6 @@
 [submodule "packages/elixir-mode"]
 	path = packages/elixir-mode
 	url = https://github.com/elixir-lang/emacs-elixir
+[submodule "packages/flymake-cursor"]
+	path = packages/flymake-cursor
+	url = https://github.com/illusori/emacs-flymake-cursor.git

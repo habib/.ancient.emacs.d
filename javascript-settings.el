@@ -10,6 +10,7 @@
           (lambda ()
             ;; Scan the file for nested code blocks
             (imenu-add-menubar-index)
+            (ansi-color-for-comint-mode-on)
             ;; Activate the folding mode
             (hs-minor-mode t)
             (local-set-key "\C-x\C-e" 'js-send-last-sexp)
