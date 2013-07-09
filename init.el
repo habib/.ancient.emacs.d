@@ -6,7 +6,7 @@
 
 ;; All the packages should be placed under the packages folder. Add them all.
 (mapc (lambda (dir)
-	(add-to-list 'load-path dir))
+        (add-to-list 'load-path dir))
       (directory-files (concat user-emacs-directory
                                (file-name-as-directory "packages"))
                        'full))
@@ -52,15 +52,7 @@
 ;; Load up Tramp
 (require 'tramp)
 
-;; Startup Helm
-;; ; Lot's to learn in Helm. Go here: https://github.com/emacs-helm/helm/wiki
-;; (require 'helm-config)
-;; (helm-mode 1)
-;; (global-set-key (kbd "C-x C-f") 'helm-find-files)
-;; (setq enable-recursive-minibuffers t)
-
 ;; Startup IDo
-; IDo is around if Helm gets too annoying
 (require 'ido)
 (ido-mode t)
 (ido-everywhere t)
@@ -79,7 +71,6 @@
 ;; Setup Projectile
 (require 'projectile)
 (projectile-global-mode)
-;(global-set-key (kbd "C-c h") 'helm-projectile)
 
 ;; YAML mode
 (require 'yaml-mode)
@@ -102,9 +93,9 @@
 ;; Paredit
 (autoload 'paredit-mode "paredit" "Minor mode for pseudo-structurally editing Lisp code." t)
 (mapc (lambda (mode)
-	(let ((hook (intern (concat (symbol-name mode)
-				    "-mode-hook"))))
-	  (add-hook hook (lambda () (paredit-mode +1)))))
+        (let ((hook (intern (concat (symbol-name mode)
+                                    "-mode-hook"))))
+          (add-hook hook (lambda () (paredit-mode +1)))))
       modes-for-paredit)
 
 (defun turn-on-paredit () (paredit-mode 1))
@@ -235,8 +226,8 @@
 ;; CSS mode
 (autoload 'css-mode "css-mode" nil t)
 (add-hook 'css-mode-hook '(lambda ()
-			    (setq css-indent-level 2)
-			    (setq css-indent-offset 2)
+                            (setq css-indent-level 2)
+                            (setq css-indent-offset 2)
                             (rainbow-mode)))
 
 ;; Expand region
