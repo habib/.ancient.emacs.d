@@ -68,6 +68,9 @@
 ;(setq path-to-ctags (executable-find "ctags"))
 ;(setq tags-revert-without-query 1)
 
+;; Setup magit
+;(require 'magit)
+
 ;; Setup Projectile
 (require 'projectile)
 (projectile-global-mode)
