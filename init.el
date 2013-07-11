@@ -1,10 +1,4 @@
-;; When started as a GUI app on Mac OS X, Emacs doesn't pick up environment variables. I use ZSH. Change for your shell
-
-(setq path (shell-command-to-string "source $HOME/.zshrc && printf $PATH"))
-(setenv "PATH" path)
-(setq exec-path (split-string path ":"))
-
-;; All the packages should be placed under the packages folder. Add them all.
+;; Our packages are placed under the packages folder. Add all of them.
 (mapc (lambda (dir)
         (add-to-list 'load-path dir))
       (directory-files (concat user-emacs-directory
@@ -16,6 +10,16 @@
                      (file-name-as-directory "themes")))
 
 (byte-recompile-directory user-emacs-directory 0)
+
+;; When started as a GUI app on Mac OS X, Emacs doesn't pick up environment variables. I use ZSH. Change for your shell
+(if (memq window-system '(mac ns))
+  (progn
+    (require 'exec-path-from-shell)
+    (exec-path-from-shell-initialize))
+  (progn
+    (setq path (shell-command-to-string "source $HOME/.zshrc && printf $PATH"))
+    (setenv "PATH" path)
+    (setq exec-path (split-string path ":"))))
 
 ;; Keyboard shortcuts
 (global-set-key [(control j)] 'join-line)
@@ -141,6 +145,13 @@
 (defalias 'ack-same 'ack-and-a-half-same)
 (defalias 'ack-find-file 'ack-and-a-half-find-file)
 (defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
+
+;; Use the silver searcher
+(require 'ag)
+(setq ag-highlight-search t)
+;; I like to bind the *-at-point commands to F5 and F6:
+(global-set-key (kbd "<f5>") 'ag-project)
+(global-set-key (kbd "<f6>") 'ag-regexp-project-at-point)
 
 ;; Use cperl-mode instead of perl-mode
 (mapc (lambda (pair)

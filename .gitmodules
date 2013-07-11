@@ -199,3 +199,9 @@
 [submodule "packages/magit"]
 	path = packages/magit
 	url = https://github.com/emacsmirror/magit.git
+[submodule "packages/ag"]
+	path = packages/ag
+	url = https://github.com/emacsmirror/ag.git
+[submodule "packages/exec-path-from-shell"]
+	path = packages/exec-path-from-shell
+	url = https://github.com/emacsmirror/exec-path-from-shell.git
