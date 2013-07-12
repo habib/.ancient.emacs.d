@@ -25,8 +25,8 @@
 (global-set-key [(control j)] 'join-line)
 
 ;; Reliable way to maximize the window on startup on Ubuntu. Sorta successful on a Mac with Emacs 24.
-(require 'maxframe)
-(add-hook 'window-setup-hook 'maximize-frame t)
+;(require 'maxframe)
+;(add-hook 'window-setup-hook 'maximize-frame t)
 
 ;; I prefer tabs to be set at 4
 (setq tab-width 4)
