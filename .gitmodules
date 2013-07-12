@@ -88,9 +88,6 @@
 [submodule "packages/volatile-highlights"]
 	path = packages/volatile-highlights
 	url = https://github.com/emacsmirror/volatile-highlights.git
-[submodule "packages/ack-and-a-half"]
-	path = packages/ack-and-a-half
-	url = https://github.com/emacsmirror/ack-and-a-half.git
 [submodule "packages/rinari"]
 	path = packages/rinari
 	url = https://github.com/eschulte/rinari.git
