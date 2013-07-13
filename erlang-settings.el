@@ -14,4 +14,7 @@
                (set (make-variable-buffer-local 'ruby-end-check-statement-modifiers) nil)
                (ruby-end-mode +1)))
 
+;; TO-DO: Check out Wrangler for Erlang
+;; https://github.com/RefactoringTools/Wrangler
+
 (provide 'erlang-settings)

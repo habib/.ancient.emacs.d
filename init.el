@@ -189,6 +189,11 @@
  '(truncate-lines t)
  '(visible-bell t))
 
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (delete-other-windows)
+            (message "Dear %s, Emacs is ready for thy bidding... " (getenv "USER"))) t)
+
 ;; Make the fringe (gutter) smaller
 ;; the argument is a width in pixels (the default is 8)
 (if (fboundp 'fringe-mode)

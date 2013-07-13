@@ -22,4 +22,3 @@ Type: cd .emacs.d
 Type: git submodule update --init
 
 * Launch Emacs!
-(And don't worry about the compilation warnings)
