@@ -113,6 +113,7 @@
 
 ;; Yasnippet mode - EVERYWHERE!
 (require 'yasnippet)
+(setq yas-snippet-dirs "~/.emacs.d/packages/yasnippet/snippets/")
 (yas-global-mode 1)
 
 ;; Auto-complete
@@ -235,28 +236,13 @@
                             (setq css-indent-offset 2)
                             (rainbow-mode)))
 
-;; Expand region
-(require 'expand-region)
-(global-set-key (kbd "C-=") 'er/expand-region)
-
 ;; Sass-mode
 (require 'sass-mode)
 (autoload 'sass-mode "sass-mode" nil t)
 
-;; Load up Ruby and its related settings
-(require 'ruby-settings)
-
-;; Load up JavaScript and Coffeescript settings
-(require 'javascript-settings)
-
-;; Load up XML settings
-(require 'xml-settings)
-
-;; Load up Clojure settings
-(require 'clojure-settings)
-
-;; Load up Python settings
-(require 'python-settings)
+;; Expand region
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; Load up Golang mode
 (require 'go-mode)
@@ -270,17 +256,24 @@
                   auto-mode-alist)))
 (setq sml-program-name "sml")
 
-;; Load up Scala settings
-(require 'scala-settings)
-
-;; Load up Erlang and Elixir settings
-(require 'erlang-settings)
-
 ;; Gist!
 (require 'gist)
 
 ;; Add flymake-cursor for better errors
 (eval-after-load 'flymake '(require 'flymake-cursor))
+
+;; Smart operator prettifies operators
+(require 'smart-operator)
+(add-hook 'prog-mode-hook 'smart-operator-mode)
+
+;; Load up Scala, Erlang, Elixir, Ruby, JavaScript, CoffeeScript, XML, Clojure and Python  settings
+(require 'scala-settings)
+(require 'erlang-settings)
+(require 'ruby-settings)
+(require 'javascript-settings)
+(require 'xml-settings)
+(require 'clojure-settings)
+(require 'python-settings)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
