@@ -205,3 +205,6 @@
 [submodule "packages/smart-operator"]
 	path = packages/smart-operator
 	url = https://github.com/emacsmirror/smart-operator.git
+[submodule "packages/multiple-cursors"]
+	path = packages/multiple-cursors
+	url = https://github.com/emacsmirror/multiple-cursors.git

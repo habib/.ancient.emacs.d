@@ -271,6 +271,9 @@
 (require 'smart-operator)
 (add-hook 'prog-mode-hook 'smart-operator-mode)
 
+;; Multiple cursors
+(require 'multiple-cursors)
+
 ;; Load up Scala, Erlang, Elixir, Ruby, JavaScript, CoffeeScript, XML, Clojure and Python  settings
 (require 'scala-settings)
 (require 'erlang-settings)
