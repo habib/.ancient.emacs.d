@@ -61,12 +61,33 @@
 (ido-mode t)
 (ido-everywhere t)
 (setq ido-enable-prefix nil
+      ido-use-virtual-buffers t
+      ido-use-filename-at-point nil
+      ido-auto-merge-work-directories-length 0
       ido-enable-flex-matching t
       ido-create-new-buffer 'always
-      ido-max-prospects 10)
+      ido-save-directory-list-file "~/.emacs.d/ido.hist"
+      ido-max-prospects 10
+      ido-default-file-method 'selected-window)
+
 (defun ido-complete-hook ()
   (define-key ido-completion-map [tab] 'ido-complete))
 (add-hook 'ido-setup-hook 'ido-complete-hook)
+
+(require 'ido-ubiquitous)
+(ido-ubiquitous-mode t)
+
+(require 'smex)
+(global-set-key (kbd "M-x") 'smex)
+(setq smex-save-file "~/.emacs.d/.smex-items")
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+
+(require 'idomenu)
+
+;; Allow the same buffer to be open in different frames
+(setq ido-default-buffer-method 'selected-window)
 
 ;; Setup Ctags
 ;(setq path-to-ctags (executable-find "ctags"))
@@ -261,6 +282,9 @@
                   auto-mode-alist)))
 (setq sml-program-name "sml")
 
+;; .zsh file is shell script too
+(add-to-list 'auto-mode-alist '("\\.zsh\\'" . shell-script-mode))
+
 ;; Gist!
 (require 'gist)
 
@@ -269,12 +293,11 @@
 
 ;; Smart operator prettifies operators
 (require 'smart-operator)
-(add-hook 'prog-mode-hook 'smart-operator-mode)
 
 ;; Multiple cursors
 (require 'multiple-cursors)
 
-;; Load up Scala, Erlang, Elixir, Ruby, JavaScript, CoffeeScript, XML, Clojure and Python  settings
+;; Load up Scala, Erlang, Elixir, Ruby, JavaScript, CoffeeScript, XML, Clojure and Python settings
 (require 'scala-settings)
 (require 'erlang-settings)
 (require 'ruby-settings)

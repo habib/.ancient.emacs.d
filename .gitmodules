@@ -208,3 +208,12 @@
 [submodule "packages/multiple-cursors"]
 	path = packages/multiple-cursors
 	url = https://github.com/emacsmirror/multiple-cursors.git
+[submodule "packages/ido-ubiquitous"]
+	path = packages/ido-ubiquitous
+	url = https://github.com/emacsmirror/ido-ubiquitous.git
+[submodule "packages/smex"]
+	path = packages/smex
+	url = https://github.com/emacsmirror/smex.git
+[submodule "packages/idomenu"]
+	path = packages/idomenu
+	url = https://github.com/emacsmirror/idomenu.git
