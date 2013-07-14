@@ -27,3 +27,4 @@ tramp
 packages/*/*.elc
 nrepl-history
 projectile-bookmarks.eld
+ido.hist
