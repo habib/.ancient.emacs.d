@@ -42,8 +42,8 @@
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
 ;; Use spaces for indentation
-(setq indent-tabs-mode nil)
 (setq-default indent-tabs-mode nil)
+(setq tab-width 8)
 
 ;; I don't like to type yes. y should suffice
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -144,6 +144,18 @@
 ;(ac-config-default)
 (global-auto-complete-mode)
 
+;; Hippie expand is dabbrev expand on steroids
+(setq hippie-expand-try-functions-list '(try-expand-dabbrev
+                                         try-expand-dabbrev-all-buffers
+                                         try-expand-dabbrev-from-kill
+                                         try-complete-file-name-partially
+                                         try-complete-file-name
+                                         try-expand-all-abbrevs
+                                         try-expand-list
+                                         try-expand-line
+                                         try-complete-lisp-symbol-partially
+                                         try-complete-lisp-symbol))
+
 ;; I don't want those temporary files
 (setq make-backup-files nil)
 (setq auto-save-default nil)
@@ -224,7 +236,8 @@
 (require 'uniquify)
 (setq
     uniquify-buffer-name-style 'reverse
-    uniquify-separator ":")
+    uniquify-after-kill-buffer-p t
+    uniquify-ignore-buffers-re "^\\*")
 
 ;; Move to the previous or next window
 ;; Copied from http://nex-3.com/posts/45-efficient-window-switching-in-emacs
