@@ -193,6 +193,13 @@
 (require 'powerline)
 (powerline-default-theme)
 
+;; Save recent files
+(require 'recentf)
+(setq recentf-save-file "~/.emacs.d/recentf"
+      recentf-max-saved-items 200
+      recentf-max-menu-items 15)
+(recentf-mode t)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -212,7 +219,6 @@
  '(hl-line-mode 1 t)
  '(inhibit-startup-screen t)
  '(mouse-yank-at-point t)
- '(recentf-mode 1)
  '(save-place t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
