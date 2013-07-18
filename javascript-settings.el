@@ -1,5 +1,5 @@
 ;; Due to mode-name aliasing Auto-complete cannot find js-mode. Hence make a symlink
-(shell-command "ln -s ~/.emacs.d/packages/auto-complete/ac-dict/javascript-mode ~/.emacs.d/packages/auto-complete/ac-dict/js-mode")
+(shell-command "ln -s ~/.emacs.d/packages/auto-complete/dict/javascript-mode ~/.emacs.d/packages/auto-complete/dict/js-mode")
 
 ;; Node
 (require 'js-comint)
