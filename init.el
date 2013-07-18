@@ -200,6 +200,17 @@
       recentf-max-menu-items 15)
 (recentf-mode t)
 
+;; Savehist keeps track of some history
+(require 'savehist)
+(setq savehist-additional-variables
+      ;; search entries
+      '(search ring regexp-search-ring)
+      ;; save every minute
+      savehist-autosave-interval 60
+      ;; keep the home clean
+      savehist-file "~/.emacs.d/savehist")
+(savehist-mode +1)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
