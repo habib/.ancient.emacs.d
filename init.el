@@ -1,9 +1,7 @@
 ;; Our packages are placed under the packages folder. Add all of them.
-(mapc (lambda (dir)
-        (add-to-list 'load-path dir))
-      (directory-files (concat user-emacs-directory
-                               (file-name-as-directory "packages"))
-                       'full))
+(let ((default-directory "~/.emacs.d/packages/"))
+      (normal-top-level-add-to-load-path '("."))
+      (normal-top-level-add-subdirs-to-load-path))
 
 (add-to-list 'custom-theme-load-path
              (concat user-emacs-directory
@@ -168,6 +166,9 @@
 (setq x-select-enable-clipboard t)
 (if (functionp 'x-cut-buffer-or-selection-value)
     (setq interprogram-paste-function 'x-cut-buffer-or-selection-value))
+
+;; Clean up obsolete buffers automatically
+(require 'midnight)
 
 ;; Android mode
 (require 'android-mode)
