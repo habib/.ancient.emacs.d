@@ -1,7 +1,9 @@
 ;; Our packages are placed under the packages folder. Add all of them.
-(let ((default-directory "~/.emacs.d/packages/"))
+(let ((default-directory (concat user-emacs-directory "packages")))
       (normal-top-level-add-to-load-path '("."))
       (normal-top-level-add-subdirs-to-load-path))
+
+(add-to-list 'load-path "~/.emacs.d/")
 
 (add-to-list 'custom-theme-load-path
              (concat user-emacs-directory
