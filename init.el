@@ -56,6 +56,20 @@
 ;; Load up Tramp
 (require 'tramp)
 
+;; Dired - reuse current buffer by pressing 'a'
+(put 'dired-find-alternate-file 'disabled nil)
+
+;; Always delete and copy recursively
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
+
+;; Dired-x
+(require 'dired-x)
+
+;; ediff - don't start another frame
+(require 'ediff)
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
 ;; Startup IDo
 (require 'ido)
 (ido-mode t)
@@ -131,6 +145,7 @@
 
 ;; Autopair mode
 (require 'autopair)
+(add-hook 'python-mode-hook #'(lambda () (autopair-mode)))
 
 ;; Yasnippet mode - EVERYWHERE!
 (require 'yasnippet)
@@ -230,7 +245,7 @@
  '(global-font-lock-mode t)
  '(global-hl-line-mode t)
  '(global-linum-mode 1)
- '(hl-line-mode 1 t)
+ '(hl-line-mode 1)
  '(inhibit-startup-screen t)
  '(mouse-yank-at-point t)
  '(save-place t nil (saveplace))
@@ -239,6 +254,7 @@
  '(size-indication-mode t)
  '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify)))
  '(tool-bar-mode nil)
+ '(menu-bar-mode nil)
  '(truncate-lines t)
  '(visible-bell t))
 
