@@ -311,6 +311,9 @@
                             (setq css-indent-offset 2)
                             (rainbow-mode)))
 
+;; Rust mode
+(require 'rust-mode)
+
 ;; Sass-mode
 (require 'sass-mode)
 (autoload 'sass-mode "sass-mode" nil t)
