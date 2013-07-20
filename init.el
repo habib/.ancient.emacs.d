@@ -332,6 +332,7 @@
 
 ;; .zsh file is shell script too
 (add-to-list 'auto-mode-alist '("\\.zsh\\'" . shell-script-mode))
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
 ;; Gist!
 (require 'gist)
