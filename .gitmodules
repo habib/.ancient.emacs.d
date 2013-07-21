@@ -226,3 +226,6 @@
 [submodule "packages/virtualenv"]
 	path = packages/virtualenv
 	url = https://github.com/emacsmirror/virtualenv.git
+[submodule "packages/diminish"]
+	path = packages/diminish
+	url = https://github.com/emacsmirror/diminish.git

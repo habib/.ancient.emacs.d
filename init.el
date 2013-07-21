@@ -21,6 +21,9 @@
     (setenv "PATH" path)
     (setq exec-path (split-string path ":"))))
 
+;; Diminish keeps the modeline tidy
+(require 'diminish)
+
 ;; Keyboard shortcuts
 (global-set-key [(control j)] 'join-line)
 
@@ -202,6 +205,7 @@
 ;; Volatile highlights
 (require 'volatile-highlights)
 (volatile-highlights-mode t)
+(diminish 'volatile-highlights-mode)
 
 ;; Customize powerline
 (require 'powerline)
