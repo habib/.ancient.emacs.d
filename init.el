@@ -52,6 +52,22 @@
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'text-mode-hook 'turn-on-flyspell)
 
+;; wcheck mode for spelling and other corrections
+(autoload 'wcheck-mode "wcheck-mode" "Toggle wcheck-mode." t)
+(autoload 'wcheck-change-language "wcheck-mode" "Switch wcheck-mode languages." t)
+(autoload 'wcheck-actions "wcheck-mode" "Open actions menu." t)
+(autoload 'wcheck-jump-forward "wcheck-mode" "Move point forward to next marked text area." t)
+(autoload 'wcheck-jump-backward "wcheck-mode" "Move point backward to previous marked text area." t)
+
+(setq-default
+  wcheck-language "English"
+  wcheck-language-data '(("English"
+                          (program . "/usr/local/bin/ispell")
+                          (args "-l" "-a" "-d" "english")
+                          (action-program . "/usr/local/bin/ispell")
+                          (action-args "-m" "-a" "-d" "english")
+                          (action-parser . wcheck-parser-ispell-suggestions))))
+
 ;; Load up Tramp
 (require 'tramp)
 

@@ -1,7 +1,7 @@
 This is my .emacs.d folder. I use it program in Ruby, JavaScript and the occasional Python or SML.
 
 * Prerequisites
-All OS: git (d'oh), exuberant-ctags, the silver searcher
+All OS: git (d'oh), exuberant-ctags, the silver searcher, ispell
 
 For programming in Ruby you need:
 rbenv (or RVM) and a Ruby

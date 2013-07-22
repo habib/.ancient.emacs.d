@@ -232,3 +232,6 @@
 [submodule "packages/flx"]
 	path = packages/flx
 	url = https://github.com/emacsmirror/flx.git
+[submodule "packages/wcheck-mode"]
+	path = packages/wcheck-mode
+	url = https://github.com/tlikonen/wcheck-mode.git
