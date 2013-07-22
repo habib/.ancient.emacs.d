@@ -100,9 +100,6 @@
 [submodule "packages/elunit"]
 	path = packages/elunit
 	url = https://github.com/emacsattic/elunit.git
-[submodule "packages/python-mode"]
-	path = packages/python-mode
-	url = https://github.com/emacsmirror/python-mode.git
 [submodule "packages/python-pep8"]
 	path = packages/python-pep8
 	url = https://github.com/emacsmirror/python-pep8.git
