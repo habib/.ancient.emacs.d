@@ -229,3 +229,6 @@
 [submodule "packages/diminish"]
 	path = packages/diminish
 	url = https://github.com/emacsmirror/diminish.git
+[submodule "packages/flx"]
+	path = packages/flx
+	url = https://github.com/emacsmirror/flx.git

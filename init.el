@@ -73,6 +73,7 @@
 (require 'ido)
 (ido-mode t)
 (ido-everywhere t)
+(require 'flx-ido)
 (setq ido-enable-prefix nil
       ido-use-virtual-buffers t
       ido-use-filename-at-point nil
@@ -82,6 +83,9 @@
       ido-save-directory-list-file "~/.emacs.d/ido.hist"
       ido-max-prospects 10
       ido-default-file-method 'selected-window)
+
+(flx-ido-mode +1)
+(setq ido-use-faces nil)
 
 (defun ido-complete-hook ()
   (define-key ido-completion-map [tab] 'ido-complete))
