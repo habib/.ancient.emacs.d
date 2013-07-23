@@ -232,3 +232,12 @@
 [submodule "packages/wcheck-mode"]
 	path = packages/wcheck-mode
 	url = https://github.com/tlikonen/wcheck-mode.git
+[submodule "packages/epc"]
+	path = packages/epc
+	url = https://github.com/kiwanami/emacs-epc.git
+[submodule "packages/ctable"]
+	path = packages/ctable
+	url = https://github.com/kiwanami/emacs-ctable.git
+[submodule "packages/jedi"]
+	path = packages/jedi
+	url = https://github.com/tkf/emacs-jedi.git

@@ -7,7 +7,7 @@ For programming in Ruby you need:
 rbenv (or RVM) and a Ruby
 
 For programming in Python you need:
-python, ipython, pep8, pylint
+python, pep8, pylint, jedi, epc, virtualenv
 
 For programming in SML you need to install sml/nj
 
