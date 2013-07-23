@@ -59,12 +59,13 @@
 (autoload 'wcheck-jump-forward "wcheck-mode" "Move point forward to next marked text area." t)
 (autoload 'wcheck-jump-backward "wcheck-mode" "Move point backward to previous marked text area." t)
 
+(setq ispell-path (executable-find "ispell"))
 (setq-default
   wcheck-language "English"
-  wcheck-language-data '(("English"
-                          (program . "/usr/local/bin/ispell")
+  wcheck-language-data `(("English"
+                          (program . ,ispell-path)
                           (args "-l" "-a" "-d" "english")
-                          (action-program . "/usr/local/bin/ispell")
+                          (action-program . ,ispell-path)
                           (action-args "-m" "-a" "-d" "english")
                           (action-parser . wcheck-parser-ispell-suggestions))))
 
