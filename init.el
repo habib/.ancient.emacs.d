@@ -158,11 +158,6 @@
           (add-hook hook (lambda () (paredit-mode +1)))))
       modes-for-paredit)
 
-(after-load 'paredit
-  (diminish 'paredit-mode " Par"))
-
-(suspend-mode-during-cua-rect-selection 'paredit-mode)
-
  ;; Autopair mode
 (require 'autopair)
 (add-hook 'python-mode-hook #'(lambda () (autopair-mode)))
