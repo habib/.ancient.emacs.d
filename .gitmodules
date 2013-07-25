@@ -241,3 +241,6 @@
 [submodule "packages/jedi"]
 	path = packages/jedi
 	url = https://github.com/tkf/emacs-jedi.git
+[submodule "packages/undo-tree"]
+	path = packages/undo-tree
+	url = https://github.com/emacsmirror/undo-tree.git
