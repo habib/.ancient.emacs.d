@@ -148,7 +148,7 @@
              (define-key yaml-mode-map (kbd "C-c C-p") 'yaml-path/path)))
 
 ;; Modes in which Paredit should be active
-(setf modes-for-paredit '(emacs-lisp lisp inferior-lisp slime slime-repl repl))
+(setf modes-for-paredit '(emacs-lisp lisp inferior-lisp slime slime-repl repl clojure))
 
 ;; Paredit
 (autoload 'paredit-mode "paredit" "Minor mode for pseudo-structurally editing Lisp code." t)
@@ -158,10 +158,12 @@
           (add-hook hook (lambda () (paredit-mode +1)))))
       modes-for-paredit)
 
-(defun turn-on-paredit () (paredit-mode 1))
-(add-hook 'clojure-mode-hook 'turn-on-paredit)
+(after-load 'paredit
+  (diminish 'paredit-mode " Par"))
 
-;; Autopair mode
+(suspend-mode-during-cua-rect-selection 'paredit-mode)
+
+ ;; Autopair mode
 (require 'autopair)
 (add-hook 'python-mode-hook #'(lambda () (autopair-mode)))
 
