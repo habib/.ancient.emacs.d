@@ -27,9 +27,6 @@
 ;; Keyboard shortcuts
 (global-set-key [(control j)] 'join-line)
 
-;; I prefer tabs to be set at 4
-(setq tab-width 4)
-
 ;; Trailing whitespace should be banned
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq whitespace-style '(trailing space-before-tab indentation space-after-tab))
@@ -42,7 +39,7 @@
 
 ;; Use spaces for indentation
 (setq-default indent-tabs-mode nil)
-(setq tab-width 8)
+(setq-default tab-width 8)
 
 ;; I don't like to type yes. y should suffice
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -133,6 +130,7 @@
 ;; Setup Projectile
 (require 'projectile)
 (projectile-global-mode)
+(diminish 'projectile-mode "Prjl")
 
 ;; YAML mode
 (require 'yaml-mode)
@@ -370,6 +368,10 @@
 
 ;; Multiple cursors
 (require 'multiple-cursors)
+
+;; Sensible undo
+(global-undo-tree-mode)
+(diminish 'undo-tree-mode)
 
 ;; Load up Scala, Erlang, Elixir, Ruby, JavaScript, CoffeeScript, XML, Clojure and Python settings
 (require 'scala-settings)
