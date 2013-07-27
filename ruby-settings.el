@@ -45,7 +45,6 @@
      (require 'ruby-block)
      (ruby-block-mode t)
      (add-hook 'ruby-mode-hook 'ri-bind-key)
-     (add-hook 'ruby-mode-hook 'smart-operator-mode)
      (let ((m ruby-mode-map))
        (define-key m (kbd "RET") 'reindent-then-newline-and-indent)
        (define-key m (kbd "C-M-h") 'backward-kill-word)

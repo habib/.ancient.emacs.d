@@ -133,16 +133,16 @@
 (diminish 'projectile-mode "Prjl")
 
 ;; YAML mode
-(require 'yaml-mode)
+(autoload 'yaml-mode "yaml-mode")
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
-(require 'flymake-yaml)
+(autoload 'flymake-yaml "flymake-yaml")
 (add-hook 'yaml-mode-hook 'flymake-yaml-load)
 (add-hook 'yaml-mode-hook
           '(lambda ()
              (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
-(require 'yaml-path)
+(autoload 'yaml-path "yaml-path")
 (add-hook 'yaml-mode-hook
           '(lambda ()
              (define-key yaml-mode-map (kbd "C-c C-p") 'yaml-path/path)))
@@ -203,7 +203,7 @@
 (require 'midnight)
 
 ;; Android mode
-(require 'android-mode)
+(autoload 'android-mode "android-mode")
 
 ;; Use the silver searcher
 (require 'ag)
@@ -307,15 +307,15 @@
 (global-set-key (kbd "M-<left>")  'select-previous-window)
 
 ;; Writegood mode
-(require 'writegood-mode)
+(autoload 'writegood-mode "writegood-mode")
 (global-set-key "\C-cg" 'writegood-mode)
 
 ;; Rainbow mode - Highlights colors within a file, such as "#FF00FF"
 ;; or "rgba(1,2,3,0.5)"
-(require 'rainbow-mode)
+(autoload 'rainbow-mode "rainbow-mode")
 
 ;; Rainbow delimiters
-(require 'rainbow-delimiters)
+(autoload 'rainbow-delimiters-mode "rainbow-delimiters")
 ; In Emacs 24+
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'paredit-mode-hook 'rainbow-delimiters-mode)
@@ -328,18 +328,17 @@
                             (rainbow-mode)))
 
 ;; Rust mode
-(require 'rust-mode)
+(autoload 'rust-mode "rust-mode")
 
 ;; Sass-mode
-(require 'sass-mode)
 (autoload 'sass-mode "sass-mode" nil t)
 
 ;; Expand region
-(require 'expand-region)
+(autoload 'expand-region "expand-region")
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; Load up Golang mode
-(require 'go-mode)
+(autoload 'go-mode "go-mode")
 
 ;; Load up SML mode
 (autoload 'sml-mode  "sml-mode" "Major mode for editing SML." t)
@@ -355,16 +354,13 @@
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
 ;; Gist!
-(require 'gist)
+(autoload 'gist "gist")
 
 ;; Add flymake-cursor for better errors
 (eval-after-load 'flymake '(require 'flymake-cursor))
 
-;; Smart operator prettifies operators
-(require 'smart-operator)
-
 ;; Multiple cursors
-(require 'multiple-cursors)
+(autoload 'multiple-cursors "multiple-cursors")
 
 ;; Sensible undo
 (require 'undo-tree)
