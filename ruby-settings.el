@@ -1,22 +1,22 @@
 ;;Basic setup
-(require 'ruby-mode)
-(require 'ruby-hash-syntax)
+(autoload 'ruby-mode "ruby-mode")
+(autoload 'ruby-hash-syntax "ruby-hash-syntax")
 (require 'flymake)
 (require 'flymake-ruby)
-(require 'yari)
+(autoload 'yari "yari")
 
 (setq ruby-use-encoding-map nil)
 
 ;; Haml mode
-(require 'haml-mode)
+(autoload 'haml-mode "haml-mode")
 
 ;; RVM - it is still here if you need it.
 ;(require 'rvm)
 ;(rvm-use-default)
 
 ;; RBENV
-(require 'rbenv)
-(global-rbenv-mode)
+(autoload 'rbenv "rbenv")
+(autoload 'global-rbenv-mode "rbenv")
 
 (defalias 'inf-ruby-keys 'inf-ruby-setup-keybindings)
 
@@ -36,9 +36,9 @@
      ;; work around possible elpa bug
      (ignore-errors (require 'ruby-compilation))
      (setq ruby-use-encoding-map nil)
-     (require 'inf-ruby)
+     (autoload 'inf-ruby "inf-ruby")
      (add-hook 'ruby-mode-hook 'inf-ruby-keys)
-     (inf-ruby-switch-setup)
+     (autoload 'inf-ruby-switch-setup "inf-ruby")
      (add-hook 'ruby-mode-hook 'flymake-ruby-load)
      (require 'ruby-tools)
      (ruby-tools-mode +1)
@@ -122,7 +122,7 @@
 ;;               (set-auto-complete-as-completion-at-point-function))))
 
 ;; rhtml mode
-(require 'rhtml-mode)
+(autoload 'rhtml-mode "rhtml-mode")
 ; put rhtml templates into rhtml-mode
 (setq auto-mode-alist  (cons '("\\.erb$" . rhtml-mode) auto-mode-alist))
 (setq auto-mode-alist  (cons '("\\.rhtml$" . rhtml-mode) auto-mode-alist))
@@ -131,9 +131,9 @@
 
 ;; FIX ME
 ;; Rspec mode
-(require 'rspec-mode)
+(autoload 'rspec-mode "rspec-mode")
 ;(setq rspec-use-rvm t)
-(rspec-install-snippets)
+(autoload 'rspec-install-snippets "rspec-mode")
 
 ;; Shoulda mode
 ;(require 'shoulda-mode)
@@ -143,12 +143,12 @@
 ;; Set the default language to English if .feature doesn't have "# language: en"
 (setq feature-default-language "en")
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
-(require 'feature-mode)
+(autoload 'feature-mode "feature-mode")
 (yas-load-directory (concat user-emacs-directory
                             "packages/feature-mode/snippets"))
 
 ;; Rinari mode
-(require 'rinari)
+(autoload 'rinari "rinari")
 (setq rinari-tags-file-name "TAGS")
 (setq rinari-major-modes
       '(mumamo-after-change-major-mode-hook dired-mode-hook ruby-mode-hook css-mode-hook yaml-mode-hook javascript-mode-hook))
