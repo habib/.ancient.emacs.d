@@ -1,8 +1,8 @@
-(require 'python-pep8)
-(require 'python-pylint)
-(require 'nose)
-(require 'deferred)
-(require 'epc)
+(autoload 'python-pep8 "python-pep8")
+(autoload 'python-pylint "python-pylint")
+(autoload 'nose "nose")
+(autoload 'deferred "deferred")
+(autoload 'epc "epc")
 
 (setq jedi:setup-keys t)
 (autoload 'jedi:setup "jedi" nil t)

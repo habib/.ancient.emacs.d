@@ -1,5 +1,5 @@
 ;; Elixir mode
-(require 'elixir-mode)
+(autoload 'elixir-mode "elixir-mode")
 
 (defun elixir-mode-compile-on-save ()
   "Elixir mode compile files on save."

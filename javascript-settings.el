@@ -2,7 +2,7 @@
 (shell-command "ln -s ~/.emacs.d/packages/auto-complete/dict/javascript-mode ~/.emacs.d/packages/auto-complete/dict/js-mode")
 
 ;; Node
-(require 'js-comint)
+(autoload 'js-comint "js-comint")
 (setq inferior-js-program-command "node") ;; not "node-repl"
 (setenv "NODE_NO_READLINE" "1")
 
@@ -20,7 +20,7 @@
             (local-set-key "\C-cl" 'js-load-file-and-go)))
 
 ;; CoffeeScript mode
-(require 'coffee-mode)
+(autoload 'coffee-mode "coffee-mode")
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 
