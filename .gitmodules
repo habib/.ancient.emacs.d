@@ -244,3 +244,6 @@
 [submodule "packages/undo-tree"]
 	path = packages/undo-tree
 	url = https://github.com/emacsmirror/undo-tree.git
+[submodule "packages/fill-column-indicator"]
+	path = packages/fill-column-indicator
+	url = https://github.com/emacsmirror/fill-column-indicator.git

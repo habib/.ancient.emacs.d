@@ -32,10 +32,15 @@
 (setq whitespace-style '(trailing space-before-tab indentation space-after-tab))
 
 ;; Lines shouldn't be too long
-(require 'whitespace)
-(setq whitespace-line-column 80)
-(setq whitespace-style '(face lines-tail))
-(add-hook 'prog-mode-hook 'whitespace-mode)
+;; (require 'whitespace)
+;; (setq whitespace-line-column 80)
+;; (setq whitespace-style '(face lines-tail))
+;; (add-hook 'prog-mode-hook 'whitespace-mode)
+(require 'fill-column-indicator)
+(add-hook 'prog-mode-hook #'(lambda ()
+                              (progn
+                                (setq fci-rule-column 80)
+                                (fci-mode 1))))
 
 ;; Use spaces for indentation
 (setq-default indent-tabs-mode nil)
