@@ -27,6 +27,11 @@
 ;; Keyboard shortcuts
 (global-set-key [(control j)] 'join-line)
 
+;; Bookmarks
+(require 'bookmark)
+(setq bookmark-default-file "~/.emacs.d/bookmarks"
+      bookmark-save-flag 1)
+
 ;; Trailing whitespace should be banned
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq whitespace-style '(trailing space-before-tab indentation space-after-tab))
