@@ -352,7 +352,10 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; Load up Golang mode
+;; go get -u github.com/dougm/goflymake
 (require 'go-mode)
+(require 'go-flymake)
+(require 'go-flycheck)
 
 ;; Load up SML mode
 (autoload 'sml-mode  "sml-mode" "Major mode for editing SML." t)
