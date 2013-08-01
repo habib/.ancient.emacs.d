@@ -256,6 +256,10 @@
       savehist-file "~/.emacs.d/savehist")
 (savehist-mode +1)
 
+;; Saveplace
+(require 'saveplace)
+(setq save-place-file "~/.emacs.d/saveplace")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -275,7 +279,6 @@
  '(hl-line-mode 1)
  '(inhibit-startup-screen t)
  '(mouse-yank-at-point t)
- '(save-place t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(size-indication-mode t)
