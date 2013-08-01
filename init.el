@@ -174,7 +174,8 @@
 
 ;; Yasnippet mode - EVERYWHERE!
 (require 'yasnippet)
-(setq yas-snippet-dirs "~/.emacs.d/packages/yasnippet/snippets/")
+(add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets/yasnippets")
+(add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets/yasnippet-go")
 (yas-global-mode 1)
 
 ;; Auto-complete
@@ -348,7 +349,7 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; Load up Golang mode
-(autoload 'go-mode "go-mode")
+(require 'go-mode)
 
 ;; Load up SML mode
 (autoload 'sml-mode  "sml-mode" "Major mode for editing SML." t)

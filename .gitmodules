@@ -247,3 +247,6 @@
 [submodule "packages/fill-column-indicator"]
 	path = packages/fill-column-indicator
 	url = https://github.com/emacsmirror/fill-column-indicator.git
+[submodule "snippets/yasnippet-go"]
+	path = snippets/yasnippet-go
+	url = https://github.com/dominikh/yasnippet-go.git
