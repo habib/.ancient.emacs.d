@@ -157,8 +157,13 @@
           '(lambda ()
              (define-key yaml-mode-map (kbd "C-c C-p") 'yaml-path/path)))
 
+;; Quack, for Scheme
+(require 'quack)
+
+;; Explore Geiser
+
 ;; Modes in which Paredit should be active
-(setf modes-for-paredit '(emacs-lisp lisp inferior-lisp slime slime-repl repl clojure))
+(setf modes-for-paredit '(emacs-lisp scheme lisp inferior-lisp slime slime-repl repl clojure))
 
 ;; Paredit
 (autoload 'paredit-mode "paredit" "Minor mode for pseudo-structurally editing Lisp code." t)
