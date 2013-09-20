@@ -259,3 +259,15 @@
 [submodule "packages/quack"]
 	path = packages/quack
 	url = https://github.com/emacsmirror/quack.git
+[submodule "packages/f"]
+	path = packages/f
+	url = https://github.com/rejeep/f.el.git
+[submodule "packages/git-modes"]
+	path = packages/git-modes
+	url = https://github.com/magit/git-modes.git
+[submodule "packages/mocker"]
+	path = packages/mocker
+	url = https://github.com/emacsmirror/mocker.git
+[submodule "packages/direx"]
+	path = packages/direx
+	url = https://github.com/emacsmirror/direx.git
